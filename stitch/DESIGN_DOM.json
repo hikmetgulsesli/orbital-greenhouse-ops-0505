@@ -1,0 +1,5089 @@
+{
+  "generatedAt": "2026-05-05T04:39:03.081Z",
+  "screenCount": 8,
+  "screens": {
+    "1115c152d622453b86b5963c5a2e169e": {
+      "screenId": "1115c152d622453b86b5963c5a2e169e",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "bg-slate-900",
+            "h-screen",
+            "w-64",
+            "border-r",
+            "border-slate-700",
+            "flat",
+            "no",
+            "shadows",
+            "tonal-layers",
+            "fixed"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "bg-slate-950",
+            "flex",
+            "justify-between",
+            "items-center",
+            "h-16",
+            "px-6",
+            "w-full",
+            "sticky",
+            "top-0",
+            "z-50"
+          ],
+          "childCount": 6
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "overflow-y-auto",
+            "p-gutter",
+            "md:p-margin",
+            "bg-background",
+            "relative"
+          ],
+          "childCount": 22
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "System Status",
+          "classes": [
+            "hidden",
+            "lg:flex",
+            "items-center",
+            "gap-2",
+            "h-touch_target",
+            "px-4",
+            "border",
+            "border-slate-700",
+            "rounded",
+            "text-slate-400",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Data",
+          "classes": [
+            "hidden",
+            "lg:flex",
+            "items-center",
+            "gap-2",
+            "h-touch_target",
+            "px-4",
+            "bg-primary-container",
+            "text-on-primary-container",
+            "rounded",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-opacity-90",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": "sync",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "h-touch_target",
+            "w-touch_target",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "rounded",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80",
+            "relative"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "classes": [
+            "h-touch_target",
+            "w-touch_target",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "rounded",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Cancel",
+          "classes": [
+            "h-touch_target",
+            "px-lg",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "text-on-surface",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-surface-container-highest",
+            "transition-colors",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background",
+            "outline-none"
+          ],
+          "icon": null,
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Bay",
+          "classes": [
+            "h-touch_target",
+            "px-lg",
+            "bg-primary-container",
+            "text-on-primary-container",
+            "rounded",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-opacity-90",
+            "transition-colors",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background",
+            "outline-none",
+            "flex",
+            "items-center",
+            "gap-sm"
+          ],
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search parameters...",
+          "placeholder": "Search parameters...",
+          "name": "",
+          "classes": [
+            "bg-surface-container-lowest",
+            "border",
+            "border-slate-700",
+            "rounded",
+            "h-10",
+            "pl-10",
+            "pr-4",
+            "text-on-surface",
+            "font-body-md",
+            "focus:border-blue-600",
+            "focus:ring-1",
+            "focus:ring-blue-600",
+            "focus:outline-none",
+            "transition-colors",
+            "w-64"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "text",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "h-touch_target",
+            "bg-surface-container-lowest",
+            "border",
+            "border-surface-container-highest",
+            "rounded",
+            "px-md",
+            "font-mono-data",
+            "text-mono-data",
+            "text-on-surface",
+            "opacity-70",
+            "cursor-not-allowed"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "select",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "appearance-none",
+            "w-full",
+            "h-touch_target",
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "px-md",
+            "pr-10",
+            "font-body-md",
+            "text-body-md",
+            "text-on-surface",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "focus:outline-none",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "number",
+          "label": "number",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "h-touch_target",
+            "bg-surface-container-lowest",
+            "border",
+            "border-error",
+            "rounded",
+            "pl-md",
+            "pr-10",
+            "font-mono-data",
+            "text-mono-data",
+            "text-on-surface",
+            "focus:border-error",
+            "focus:ring-1",
+            "focus:ring-error",
+            "focus:outline-none",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "time",
+          "label": "time",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "h-touch_target",
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "px-md",
+            "font-mono-data",
+            "text-mono-data",
+            "text-on-surface",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "focus:outline-none",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "potted_plant",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "science",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "warning",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings_suggest",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "history",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "help_outline",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "terminal",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "CROP BAYS",
+          "href": "#",
+          "classes": [
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "potted_plant",
+        "science",
+        "warning",
+        "settings_suggest",
+        "history",
+        "settings",
+        "help_outline",
+        "terminal",
+        "search",
+        "sync",
+        "notifications",
+        "emergency_home",
+        "chevron_right",
+        "arrow_drop_down",
+        "save"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCGKKe-i5NCcnUbea6Lvv_7hFWc45eZ3BTokkXs_Jue8l8sATvlgMx0ygBLdnaDgdfjSetaN6CdP3lyqDpSujr7MkA5dEocVl3zcWEIlOGff67tTQkW6Bsa4N6lqZL0T49Vxwf7nRFpfZZUWtB2UW",
+          "alt": "Crew Member Profile"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-secondary-fixed-variant": "#39485a",
+        "on-primary-fixed-variant": "#003ea8",
+        "on-tertiary-fixed": "#360f00",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "surface-container-highest": "#32343d",
+        "surface-container-high": "#282a32",
+        "on-primary": "#002a78",
+        "primary-container": "#2563eb",
+        "on-surface-variant": "#c3c6d7",
+        "on-tertiary-container": "#ffede6",
+        "surface-container": "#1d1f27",
+        "background": "#11131b",
+        "surface-bright": "#373942",
+        "secondary-fixed-dim": "#b9c8de",
+        "on-background": "#e1e2ed",
+        "surface-container-lowest": "#0c0e16",
+        "surface": "#11131b",
+        "tertiary-fixed": "#ffdbcd",
+        "inverse-surface": "#e1e2ed",
+        "on-secondary-fixed": "#0d1c2d",
+        "on-error": "#690005",
+        "secondary": "#b9c8de",
+        "tertiary": "#ffb596",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "primary-fixed": "#dbe1ff",
+        "secondary-fixed": "#d4e4fa",
+        "surface-dim": "#11131b",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container-low": "#191b23",
+        "on-secondary-container": "#a7b6cc",
+        "on-surface": "#e1e2ed",
+        "outline": "#8d90a0",
+        "error-container": "#93000a",
+        "on-error-container": "#ffdad6",
+        "inverse-on-surface": "#2e3039",
+        "on-secondary": "#233143",
+        "primary-fixed-dim": "#b4c5ff",
+        "outline-variant": "#434655",
+        "on-primary-fixed": "#00174b",
+        "on-tertiary": "#581e00",
+        "error": "#ffb4ab",
+        "primary": "#b4c5ff",
+        "secondary-container": "#39485a",
+        "on-primary-container": "#eeefff",
+        "tertiary-container": "#bc4800",
+        "inverse-primary": "#0053db"
+      },
+      "fonts": [
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "CROP BAYS",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "System Status",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Data",
+          "icon": "sync",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Cancel",
+          "icon": null,
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Bay",
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search parameters...",
+          "type": "text",
+          "placeholder": "Search parameters...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "text",
+          "type": "text",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "select",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "number",
+          "type": "number",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "time",
+          "type": "time",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Configure Crop Bay"
+    },
+    "3d7bacbf38294ac0b84765ba286044b0": {
+      "screenId": "3d7bacbf38294ac0b84765ba286044b0",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "flex",
+            "flex-col",
+            "pt-16",
+            "z-40",
+            "bg-slate-900",
+            "text-blue-600"
+          ],
+          "childCount": 15
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "flex",
+            "justify-between",
+            "items-center",
+            "h-16",
+            "px-6",
+            "w-full",
+            "sticky",
+            "top-0",
+            "z-50",
+            "bg-slate-950"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "p-gutter",
+            "md:p-margin",
+            "lg:p-xl",
+            "overflow-y-auto"
+          ],
+          "childCount": 34
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "System Status",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "items-center",
+            "justify-center",
+            "h-touch_target",
+            "px-4",
+            "border",
+            "border-slate-700",
+            "text-slate-300",
+            "font-label-caps",
+            "text-label-caps",
+            "rounded-DEFAULT",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "items-center",
+            "justify-center",
+            "h-touch_target",
+            "px-4",
+            "bg-primary-container",
+            "text-on-primary-container",
+            "font-label-caps",
+            "text-label-caps",
+            "rounded-DEFAULT",
+            "hover:bg-blue-700",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "w-10",
+            "h-10",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80",
+            "rounded-DEFAULT",
+            "relative"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "classes": [
+            "w-10",
+            "h-10",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80",
+            "rounded-DEFAULT"
+          ],
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Reset Defaults",
+          "classes": [
+            "h-touch_target",
+            "px-md",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "rounded-DEFAULT",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background",
+            "outline-none"
+          ],
+          "icon": "restart_alt",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Apply Changes",
+          "classes": [
+            "h-touch_target",
+            "px-md",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2",
+            "bg-primary-container",
+            "text-on-primary-container",
+            "rounded-DEFAULT",
+            "hover:bg-blue-700",
+            "transition-colors",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background",
+            "outline-none"
+          ],
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "Export CSV Log",
+          "classes": [
+            "h-touch_target",
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2",
+            "border",
+            "border-[#334155]",
+            "text-on-surface",
+            "rounded-DEFAULT",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background",
+            "outline-none"
+          ],
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Clear Local Storage",
+          "classes": [
+            "h-touch_target",
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2",
+            "border",
+            "border-error/50",
+            "text-error",
+            "rounded-DEFAULT",
+            "hover:bg-error/10",
+            "transition-colors",
+            "focus:ring-2",
+            "focus:ring-error",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background",
+            "outline-none"
+          ],
+          "icon": "delete_forever",
+          "action": "destructive",
+          "expectedBehavior": "perform destructive action with visible feedback or confirmation"
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "QUERY SYSTEMS...",
+          "placeholder": "QUERY SYSTEMS...",
+          "name": "",
+          "classes": [
+            "bg-transparent",
+            "border-none",
+            "focus:ring-0",
+            "text-slate-200",
+            "font-mono-data",
+            "text-mono-data",
+            "w-full",
+            "placeholder-slate-500"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "radio",
+          "label": "theme",
+          "placeholder": "",
+          "name": "theme",
+          "classes": [
+            "sr-only",
+            "peer"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "select",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "h-touch_target",
+            "bg-[#0F172A]",
+            "border",
+            "border-[#334155]",
+            "text-on-background",
+            "font-body-md",
+            "text-body-md",
+            "rounded-DEFAULT",
+            "px-md",
+            "appearance-none",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "outline-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "checkbox",
+          "label": "toggle",
+          "placeholder": "",
+          "name": "toggle",
+          "classes": [
+            "toggle-checkbox",
+            "absolute",
+            "block",
+            "w-6",
+            "h-6",
+            "rounded-full",
+            "bg-white",
+            "border-4",
+            "border-[#334155]",
+            "appearance-none",
+            "cursor-pointer",
+            "transition-all",
+            "duration-300",
+            "z-10",
+            "top-0",
+            "left-0"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "potted_plant",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "science",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "warning",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings_suggest",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "history",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "help_outline",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "terminal",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "potted_plant",
+        "science",
+        "warning",
+        "settings_suggest",
+        "history",
+        "settings",
+        "help_outline",
+        "terminal",
+        "search",
+        "notifications",
+        "emergency_home",
+        "restart_alt",
+        "save",
+        "display_settings",
+        "dark_mode",
+        "light_mode",
+        "expand_more",
+        "database",
+        "download",
+        "delete_forever",
+        "notifications_active"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuC6vWWUP-xrvrvmCsv77qJvY6Q6H33D5Qj9ix8P7UGpA5PzBAoRqP0T5wXHzSbt00vS2oD2RCo7rn6FwHMPTUQRnjfwXyGnISB828XPkOXcOdHfDYrfFskpdamD8A4dqSF0wMhXXbilyu-11LNSjU",
+          "alt": "Greenhouse Module Alpha"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDiLiJn-OMjFLyNZTokXRgnYN6XsAUKi9AYZwClIp_LxEUNlIvwEF6-jXpY-7-6WKuzw5QusGMeYprWDkxK0f1ctAoxlGz2ozLPMEOwJB--oWuOhLPbiBclznxYZ0z1HDQeet_eVcpRsVuRzSOaNP",
+          "alt": "Crew Member Profile"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-secondary-fixed-variant": "#39485a",
+        "on-primary-fixed-variant": "#003ea8",
+        "on-tertiary-fixed": "#360f00",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "surface-container-highest": "#32343d",
+        "surface-container-high": "#282a32",
+        "on-primary": "#002a78",
+        "primary-container": "#2563eb",
+        "on-surface-variant": "#c3c6d7",
+        "on-tertiary-container": "#ffede6",
+        "surface-container": "#1d1f27",
+        "background": "#11131b",
+        "surface-bright": "#373942",
+        "secondary-fixed-dim": "#b9c8de",
+        "on-background": "#e1e2ed",
+        "surface-container-lowest": "#0c0e16",
+        "surface": "#11131b",
+        "tertiary-fixed": "#ffdbcd",
+        "inverse-surface": "#e1e2ed",
+        "on-secondary-fixed": "#0d1c2d",
+        "on-error": "#690005",
+        "secondary": "#b9c8de",
+        "tertiary": "#ffb596",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "primary-fixed": "#dbe1ff",
+        "secondary-fixed": "#d4e4fa",
+        "surface-dim": "#11131b",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container-low": "#191b23",
+        "on-secondary-container": "#a7b6cc",
+        "on-surface": "#e1e2ed",
+        "outline": "#8d90a0",
+        "error-container": "#93000a",
+        "on-error-container": "#ffdad6",
+        "inverse-on-surface": "#2e3039",
+        "on-secondary": "#233143",
+        "primary-fixed-dim": "#b4c5ff",
+        "outline-variant": "#434655",
+        "on-primary-fixed": "#00174b",
+        "on-tertiary": "#581e00",
+        "error": "#ffb4ab",
+        "primary": "#b4c5ff",
+        "secondary-container": "#39485a",
+        "on-primary-container": "#eeefff",
+        "tertiary-container": "#bc4800",
+        "inverse-primary": "#0053db"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "System Status",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Reset Defaults",
+          "icon": "restart_alt",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Apply Changes",
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "Export CSV Log",
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Clear Local Storage",
+          "icon": "delete_forever",
+          "action": "destructive",
+          "expectedBehavior": "perform destructive action with visible feedback or confirmation"
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "QUERY SYSTEMS...",
+          "type": "text",
+          "placeholder": "QUERY SYSTEMS...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "theme",
+          "type": "radio",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "select",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "toggle",
+          "type": "checkbox",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "System Settings"
+    },
+    "4aee37e26b5e4af9bb51001763ff75d0": {
+      "screenId": "4aee37e26b5e4af9bb51001763ff75d0",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "bg-slate-950",
+            "flex",
+            "justify-between",
+            "items-center",
+            "h-16",
+            "px-6",
+            "w-full",
+            "sticky",
+            "top-0",
+            "z-50"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "bg-slate-900",
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "flex",
+            "flex-col",
+            "pt-16",
+            "z-40",
+            "w-64"
+          ],
+          "childCount": 7
+        },
+        {
+          "tag": "main",
+          "layout": "block",
+          "classes": [
+            "ml-64",
+            "pt-16",
+            "p-margin",
+            "h-full",
+            "overflow-hidden",
+            "opacity-30",
+            "pointer-events-none",
+            "transition-opacity",
+            "filter",
+            "blur-[2px]"
+          ],
+          "childCount": 10
+        },
+        {
+          "tag": "aside",
+          "layout": "flex-col",
+          "classes": [
+            "relative",
+            "w-full",
+            "max-w-[420px]",
+            "bg-surface",
+            "h-full",
+            "border-l",
+            "border-outline-variant",
+            "flex",
+            "flex-col",
+            "shadow-2xl"
+          ],
+          "childCount": 29
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "classes": [
+            "font-inter",
+            "tracking-tight",
+            "text-sm",
+            "font-semibold",
+            "uppercase",
+            "text-blue-600",
+            "cursor-pointer",
+            "active:opacity-80",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "px-md",
+            "py-sm",
+            "rounded-DEFAULT",
+            "border",
+            "border-transparent"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "p-sm",
+            "rounded-full",
+            "cursor-pointer",
+            "active:opacity-80",
+            "flex",
+            "items-center",
+            "justify-center",
+            "h-touch_target",
+            "w-touch_target"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "classes": [
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "p-sm",
+            "rounded-full",
+            "cursor-pointer",
+            "active:opacity-80",
+            "flex",
+            "items-center",
+            "justify-center",
+            "h-touch_target",
+            "w-touch_target"
+          ],
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "close",
+          "classes": [
+            "h-touch_target",
+            "w-touch_target",
+            "flex",
+            "items-center",
+            "justify-center",
+            "rounded-DEFAULT",
+            "text-on-surface-variant",
+            "hover:text-on-surface",
+            "hover:bg-surface-container-highest",
+            "transition-colors",
+            "border",
+            "border-transparent",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:outline-none",
+            "focus:border-primary"
+          ],
+          "icon": "close",
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "END SHIFT &",
+          "classes": [
+            "w-full",
+            "h-touch_target",
+            "bg-error/10",
+            "border",
+            "border-error",
+            "text-error",
+            "rounded-DEFAULT",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-sm",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-error",
+            "hover:text-on-error",
+            "transition-colors",
+            "focus:ring-2",
+            "focus:ring-error",
+            "focus:ring-offset-2",
+            "focus:ring-offset-surface"
+          ],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/logout",
+          "expectedRoute": "/logout",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sector 7G - Active",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "font-inter",
+            "text-xs",
+            "font-medium",
+            "uppercase",
+            "tracking-wider"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "href": "#",
+          "classes": [
+            "font-inter",
+            "text-xs",
+            "font-medium",
+            "uppercase",
+            "tracking-wider"
+          ],
+          "icon": "potted_plant",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "href": "#",
+          "classes": [
+            "font-inter",
+            "text-xs",
+            "font-medium",
+            "uppercase",
+            "tracking-wider"
+          ],
+          "icon": "science",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "href": "#",
+          "classes": [
+            "font-inter",
+            "text-xs",
+            "font-medium",
+            "uppercase",
+            "tracking-wider"
+          ],
+          "icon": "warning",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "href": "#",
+          "classes": [
+            "font-inter",
+            "text-xs",
+            "font-medium",
+            "uppercase",
+            "tracking-wider"
+          ],
+          "icon": "settings_suggest",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "href": "#",
+          "classes": [
+            "font-inter",
+            "text-xs",
+            "font-medium",
+            "uppercase",
+            "tracking-wider"
+          ],
+          "icon": "history",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-inter",
+            "text-xs",
+            "font-medium",
+            "uppercase",
+            "tracking-wider"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "href": "#",
+          "classes": [
+            "font-inter",
+            "text-xs",
+            "font-medium",
+            "uppercase",
+            "tracking-wider"
+          ],
+          "icon": "help_outline",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "font-inter",
+            "text-xs",
+            "font-medium",
+            "uppercase",
+            "tracking-wider"
+          ],
+          "icon": "terminal",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "notifications",
+        "emergency_home",
+        "dashboard",
+        "potted_plant",
+        "science",
+        "warning",
+        "settings_suggest",
+        "history",
+        "settings",
+        "help_outline",
+        "terminal",
+        "badge",
+        "close",
+        "account_tree",
+        "timer",
+        "logout"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCcZnr33XdupB9c8b2gnggDA5EDCaFtbjsDVciBVSGN8RFXHPUa2CpHlkkO6osq7W7Z4clg0w9T0NS0S0_1SMqCrQmS0YbrIAE31w1qq7MCX7TrdOZ1n3ZMRQ7N0p4PdUgXSErH6JB0T3awlMv0YJ",
+          "alt": "Crew Member Profile"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAtMLvBQBE_7_t6ZomwcQj6cIUviehBq_zB9eoZ5ZMY1rqtRHA7pQheDbOE3iwVNd_VGxdhBpw4X59UMOQRpg-oQgNGNFb_mQFzrKCB2agizEdOAHp0mKjQ3nNMF9T2o-skEFqHbBldpeJAkI0RwK",
+          "alt": "Greenhouse Module Alpha"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDprEHIIIOvdSTlG_mdc-eWM9N27Mb4LhhWJPDNklmIK07Ts0Eo0KkJa0c5RWi2SlLT26uD40eKauHkJwulrhRY3qMkprJg2m5qWnPe5bJKyjvHX3a4ZQ6-xkMmxs8akRmgCHUB0GhtkwbQu2AuFG",
+          "alt": "Cmdr. J. Vance Profile"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-secondary-fixed-variant": "#39485a",
+        "on-primary-fixed-variant": "#003ea8",
+        "on-tertiary-fixed": "#360f00",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "surface-container-highest": "#32343d",
+        "surface-container-high": "#282a32",
+        "on-primary": "#002a78",
+        "primary-container": "#2563eb",
+        "on-surface-variant": "#c3c6d7",
+        "on-tertiary-container": "#ffede6",
+        "surface-container": "#1d1f27",
+        "background": "#11131b",
+        "surface-bright": "#373942",
+        "secondary-fixed-dim": "#b9c8de",
+        "on-background": "#e1e2ed",
+        "surface-container-lowest": "#0c0e16",
+        "surface": "#11131b",
+        "tertiary-fixed": "#ffdbcd",
+        "inverse-surface": "#e1e2ed",
+        "on-secondary-fixed": "#0d1c2d",
+        "on-error": "#690005",
+        "secondary": "#b9c8de",
+        "tertiary": "#ffb596",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "primary-fixed": "#dbe1ff",
+        "secondary-fixed": "#d4e4fa",
+        "surface-dim": "#11131b",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container-low": "#191b23",
+        "on-secondary-container": "#a7b6cc",
+        "on-surface": "#e1e2ed",
+        "outline": "#8d90a0",
+        "error-container": "#93000a",
+        "on-error-container": "#ffdad6",
+        "inverse-on-surface": "#2e3039",
+        "on-secondary": "#233143",
+        "primary-fixed-dim": "#b4c5ff",
+        "outline-variant": "#434655",
+        "on-primary-fixed": "#00174b",
+        "on-tertiary": "#581e00",
+        "error": "#ffb4ab",
+        "primary": "#b4c5ff",
+        "secondary-container": "#39485a",
+        "on-primary-container": "#eeefff",
+        "tertiary-container": "#bc4800",
+        "inverse-primary": "#0053db"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter"
+      ],
+      "layoutHints": {
+        "gridCols": 12,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "close",
+          "icon": "close",
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "END SHIFT &",
+          "icon": "logout",
+          "action": "navigate",
+          "route": "/logout",
+          "expectedBehavior": "navigate:/logout"
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sector 7G - Active",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Sector 7G - Active",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Crew Member Profile"
+    },
+    "85f2bf08ae414b6084b313d242dbee51": {
+      "screenId": "85f2bf08ae414b6084b313d242dbee51",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "bg-slate-950",
+            "flex",
+            "justify-between",
+            "items-center",
+            "h-16",
+            "px-6",
+            "w-full",
+            "sticky",
+            "top-0",
+            "z-50"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "bg-slate-900",
+            "h-screen",
+            "w-64",
+            "border-r",
+            "border-slate-700",
+            "flat",
+            "no",
+            "shadows",
+            "tonal-layers",
+            "fixed"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "ml-64",
+            "overflow-y-auto",
+            "bg-background",
+            "p-margin",
+            "flex",
+            "flex-col",
+            "gap-lg"
+          ],
+          "childCount": 93
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "System Status",
+          "classes": [
+            "font-inter",
+            "tracking-tight",
+            "text-sm",
+            "font-semibold",
+            "uppercase",
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80",
+            "px-sm",
+            "py-xs",
+            "rounded"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "classes": [
+            "font-inter",
+            "tracking-tight",
+            "text-sm",
+            "font-semibold",
+            "uppercase",
+            "text-blue-600",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80",
+            "px-sm",
+            "py-xs",
+            "rounded"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ALL STATUS",
+          "classes": [
+            "bg-surface-container",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "rounded",
+            "px-md",
+            "h-touch_target",
+            "flex",
+            "items-center",
+            "justify-center",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-surface-container-highest",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "NEW YIELD",
+          "classes": [
+            "bg-primary-container",
+            "border",
+            "border-primary-container",
+            "text-on-primary-container",
+            "rounded",
+            "px-md",
+            "h-touch_target",
+            "flex",
+            "items-center",
+            "justify-center",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:brightness-110",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sector 7G - Active ORBITAL_GEN_1 Greenhouse Module Alpha",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search bays, crops...",
+          "placeholder": "Search bays, crops...",
+          "name": "",
+          "classes": [
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "rounded",
+            "font-body-md",
+            "text-body-md",
+            "pl-xl",
+            "pr-sm",
+            "py-sm",
+            "focus:border-primary-container",
+            "focus:ring-1",
+            "focus:ring-primary-container",
+            "focus:outline-none",
+            "transition-all",
+            "w-64",
+            "h-touch_target"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "potted_plant",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "science",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "warning",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings_suggest",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "history",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "help_outline",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "terminal",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "notifications",
+        "emergency_home",
+        "dashboard",
+        "potted_plant",
+        "science",
+        "warning",
+        "settings_suggest",
+        "history",
+        "settings",
+        "help_outline",
+        "terminal",
+        "search",
+        "grass",
+        "water_drop",
+        "forest",
+        "error",
+        "info",
+        "sync",
+        "monitoring"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAI4QO64AVozv8B7jbr-Woac84if3Va15_ywRKh87r3lJ5poohg50cIXTPraCsyVi_c36xi6LcnZClikbc6-GURbFtwYHXuABPCdrgwZkMp7h_kcufZsWj6UHbO6dqymyGj1thYzWfpqjFN_snmBB",
+          "alt": "Crew Member Profile"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-secondary-fixed-variant": "#39485a",
+        "on-primary-fixed-variant": "#003ea8",
+        "on-tertiary-fixed": "#360f00",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "surface-container-highest": "#32343d",
+        "surface-container-high": "#282a32",
+        "on-primary": "#002a78",
+        "primary-container": "#2563eb",
+        "on-surface-variant": "#c3c6d7",
+        "on-tertiary-container": "#ffede6",
+        "surface-container": "#1d1f27",
+        "background": "#11131b",
+        "surface-bright": "#373942",
+        "secondary-fixed-dim": "#b9c8de",
+        "on-background": "#e1e2ed",
+        "surface-container-lowest": "#0c0e16",
+        "surface": "#11131b",
+        "tertiary-fixed": "#ffdbcd",
+        "inverse-surface": "#e1e2ed",
+        "on-secondary-fixed": "#0d1c2d",
+        "on-error": "#690005",
+        "secondary": "#b9c8de",
+        "tertiary": "#ffb596",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "primary-fixed": "#dbe1ff",
+        "secondary-fixed": "#d4e4fa",
+        "surface-dim": "#11131b",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container-low": "#191b23",
+        "on-secondary-container": "#a7b6cc",
+        "on-surface": "#e1e2ed",
+        "outline": "#8d90a0",
+        "error-container": "#93000a",
+        "on-error-container": "#ffdad6",
+        "inverse-on-surface": "#2e3039",
+        "on-secondary": "#233143",
+        "primary-fixed-dim": "#b4c5ff",
+        "outline-variant": "#434655",
+        "on-primary-fixed": "#00174b",
+        "on-tertiary": "#581e00",
+        "error": "#ffb4ab",
+        "primary": "#b4c5ff",
+        "secondary-container": "#39485a",
+        "on-primary-container": "#eeefff",
+        "tertiary-container": "#bc4800",
+        "inverse-primary": "#0053db"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter"
+      ],
+      "layoutHints": {
+        "gridCols": 12,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "System Status",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ALL STATUS",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "NEW YIELD",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sector 7G - Active ORBITAL_GEN_1 Greenhouse Module Alpha",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search bays, crops...",
+          "type": "text",
+          "placeholder": "Search bays, crops...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "Sector 7G - Active ORBITAL_GEN_1 Greenhouse Module Alpha",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Operations Dashboard"
+    },
+    "8b9abc298d02489ca0a466a351531de5": {
+      "screenId": "8b9abc298d02489ca0a466a351531de5",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "flex",
+            "flex-col",
+            "pt-16",
+            "z-40",
+            "bg-slate-900",
+            "border-r"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "flex",
+            "justify-between",
+            "items-center",
+            "h-16",
+            "px-6",
+            "w-full",
+            "sticky",
+            "top-0",
+            "z-50",
+            "bg-slate-950"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "overflow-y-auto",
+            "p-gutter",
+            "md:p-margin",
+            "pb-24",
+            "md:pb-margin"
+          ],
+          "childCount": 90
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "menu",
+          "classes": [
+            "md:hidden",
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "p-2",
+            "rounded",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": "menu",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "p-2",
+            "rounded-full",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "classes": [
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "p-2",
+            "rounded-full",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "System Status",
+          "classes": [
+            "btn-secondary",
+            "text-sm",
+            "h-10",
+            "min-h-0"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "classes": [
+            "btn-primary",
+            "text-sm",
+            "h-10",
+            "min-h-0"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Flush System",
+          "classes": [
+            "btn-secondary",
+            "gap-2"
+          ],
+          "icon": "water_drop",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Configuration",
+          "classes": [
+            "btn-secondary",
+            "gap-2"
+          ],
+          "icon": "edit",
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Trigger Manual Harvest",
+          "classes": [
+            "btn-primary",
+            "gap-2"
+          ],
+          "icon": "agriculture",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Expand View",
+          "classes": [
+            "btn-secondary",
+            "bg-slate-900/80",
+            "backdrop-blur"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "View Full Log",
+          "classes": [
+            "text-primary",
+            "font-label-caps",
+            "text-label-caps",
+            "uppercase",
+            "hover:underline"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sector 7G - Active",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "potted_plant",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "science",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "warning",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings_suggest",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "history",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "help_outline",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "terminal",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "potted_plant",
+        "science",
+        "warning",
+        "settings_suggest",
+        "history",
+        "settings",
+        "help_outline",
+        "terminal",
+        "menu",
+        "notifications",
+        "emergency_home",
+        "water_drop",
+        "edit",
+        "agriculture",
+        "thermostat",
+        "humidity_mid",
+        "experiment"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuA9MOHP7qap7_JGz04WKgdq9Eq4cShcRqBRUWk27pzHm7UNS6BCws2w6q4bU1auJlhCazpvfxIMSXwCoB1iex_iWkkfAx5YfIHsNKl9HoFh79Y9FOmnCIf8UUIQ6Cq4sHpKokVh_6Quvoz72Iyqhg",
+          "alt": "Hydroponic Crop Bay Camera Feed"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-secondary-fixed-variant": "#39485a",
+        "on-primary-fixed-variant": "#003ea8",
+        "on-tertiary-fixed": "#360f00",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "surface-container-highest": "#32343d",
+        "surface-container-high": "#282a32",
+        "on-primary": "#002a78",
+        "primary-container": "#2563eb",
+        "on-surface-variant": "#c3c6d7",
+        "on-tertiary-container": "#ffede6",
+        "surface-container": "#1d1f27",
+        "background": "#11131b",
+        "surface-bright": "#373942",
+        "secondary-fixed-dim": "#b9c8de",
+        "on-background": "#e1e2ed",
+        "surface-container-lowest": "#0c0e16",
+        "surface": "#11131b",
+        "tertiary-fixed": "#ffdbcd",
+        "inverse-surface": "#e1e2ed",
+        "on-secondary-fixed": "#0d1c2d",
+        "on-error": "#690005",
+        "secondary": "#b9c8de",
+        "tertiary": "#ffb596",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "primary-fixed": "#dbe1ff",
+        "secondary-fixed": "#d4e4fa",
+        "surface-dim": "#11131b",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container-low": "#191b23",
+        "on-secondary-container": "#a7b6cc",
+        "on-surface": "#e1e2ed",
+        "outline": "#8d90a0",
+        "error-container": "#93000a",
+        "on-error-container": "#ffdad6",
+        "inverse-on-surface": "#2e3039",
+        "on-secondary": "#233143",
+        "primary-fixed-dim": "#b4c5ff",
+        "outline-variant": "#434655",
+        "on-primary-fixed": "#00174b",
+        "on-tertiary": "#581e00",
+        "error": "#ffb4ab",
+        "primary": "#b4c5ff",
+        "secondary-container": "#39485a",
+        "on-primary-container": "#eeefff",
+        "tertiary-container": "#bc4800",
+        "inverse-primary": "#0053db"
+      },
+      "fonts": [
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "menu",
+          "icon": "menu",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "System Status",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Flush System",
+          "icon": "water_drop",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Configuration",
+          "icon": "edit",
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Trigger Manual Harvest",
+          "icon": "agriculture",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Expand View",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "View Full Log",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sector 7G - Active",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Sector 7G - Active",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Crop Bay Alpha-1 Detail"
+    },
+    "b73123b8034f4616a351ab5ed3dcae55": {
+      "screenId": "b73123b8034f4616a351ab5ed3dcae55",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "bg-slate-900",
+            "h-screen",
+            "w-64",
+            "border-r",
+            "border-slate-700",
+            "flat",
+            "no",
+            "shadows",
+            "tonal-layers",
+            "fixed"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "bg-slate-950",
+            "docked",
+            "full-width",
+            "top-0",
+            "border-b",
+            "border-slate-700",
+            "flat",
+            "no",
+            "shadows",
+            "flex"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "p-xl"
+          ],
+          "childCount": 9
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "System Status",
+          "classes": [
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80",
+            "px-4",
+            "py-2",
+            "rounded",
+            "h-touch_target",
+            "flex",
+            "items-center",
+            "justify-center",
+            "border",
+            "border-[#334155]",
+            "font-label-caps",
+            "text-label-caps",
+            "uppercase"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "classes": [
+            "bg-primary-container",
+            "text-on-primary-container",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80",
+            "px-4",
+            "py-2",
+            "rounded",
+            "h-touch_target",
+            "flex",
+            "items-center",
+            "justify-center",
+            "font-label-caps",
+            "text-label-caps",
+            "uppercase"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80",
+            "w-touch_target",
+            "h-touch_target",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "classes": [
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80",
+            "w-touch_target",
+            "h-touch_target",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center"
+          ],
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Initialize New Bay",
+          "classes": [
+            "bg-primary-container",
+            "text-on-primary-container",
+            "h-touch_target",
+            "px-xl",
+            "rounded",
+            "font-label-caps",
+            "text-label-caps",
+            "inline-flex",
+            "items-center",
+            "justify-center",
+            "gap-2",
+            "hover:bg-inverse-primary",
+            "transition-colors",
+            "focus:ring-2",
+            "focus:ring-primary-container",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background",
+            "uppercase",
+            "border",
+            "border-[#334155]"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-lg"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-lg"
+          ],
+          "icon": "potted_plant",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-lg"
+          ],
+          "icon": "science",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-lg"
+          ],
+          "icon": "warning",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-lg"
+          ],
+          "icon": "settings_suggest",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-lg"
+          ],
+          "icon": "history",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-lg"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-lg"
+          ],
+          "icon": "help_outline",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-lg"
+          ],
+          "icon": "terminal",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "potted_plant",
+        "science",
+        "warning",
+        "settings_suggest",
+        "history",
+        "settings",
+        "help_outline",
+        "terminal",
+        "notifications",
+        "emergency_home",
+        "person",
+        "add"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "on-secondary-fixed-variant": "#39485a",
+        "on-primary-fixed-variant": "#003ea8",
+        "on-tertiary-fixed": "#360f00",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "surface-container-highest": "#32343d",
+        "surface-container-high": "#282a32",
+        "on-primary": "#002a78",
+        "primary-container": "#2563eb",
+        "on-surface-variant": "#c3c6d7",
+        "on-tertiary-container": "#ffede6",
+        "surface-container": "#1d1f27",
+        "background": "#11131b",
+        "surface-bright": "#373942",
+        "secondary-fixed-dim": "#b9c8de",
+        "on-background": "#e1e2ed",
+        "surface-container-lowest": "#0c0e16",
+        "surface": "#11131b",
+        "tertiary-fixed": "#ffdbcd",
+        "inverse-surface": "#e1e2ed",
+        "on-secondary-fixed": "#0d1c2d",
+        "on-error": "#690005",
+        "secondary": "#b9c8de",
+        "tertiary": "#ffb596",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "primary-fixed": "#dbe1ff",
+        "secondary-fixed": "#d4e4fa",
+        "surface-dim": "#11131b",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container-low": "#191b23",
+        "on-secondary-container": "#a7b6cc",
+        "on-surface": "#e1e2ed",
+        "outline": "#8d90a0",
+        "error-container": "#93000a",
+        "on-error-container": "#ffdad6",
+        "inverse-on-surface": "#2e3039",
+        "on-secondary": "#233143",
+        "primary-fixed-dim": "#b4c5ff",
+        "outline-variant": "#434655",
+        "on-primary-fixed": "#00174b",
+        "on-tertiary": "#581e00",
+        "error": "#ffb4ab",
+        "primary": "#b4c5ff",
+        "secondary-container": "#39485a",
+        "on-primary-container": "#eeefff",
+        "tertiary-container": "#bc4800",
+        "inverse-primary": "#0053db"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "System Status",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Initialize New Bay",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "No Active Modules"
+    },
+    "eabd4de1cbd046c2b8ebbd87122dfdb8": {
+      "screenId": "eabd4de1cbd046c2b8ebbd87122dfdb8",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "bg-slate-950",
+            "flex",
+            "justify-between",
+            "items-center",
+            "h-16",
+            "px-6",
+            "w-full",
+            "sticky",
+            "top-0",
+            "z-50"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "bg-slate-900",
+            "border-r",
+            "border-slate-700",
+            "h-[calc(100vh-64px)]",
+            "w-64",
+            "flex-col",
+            "fixed",
+            "left-0"
+          ],
+          "childCount": 15
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "md:ml-64",
+            "p-6",
+            "lg:p-8",
+            "overflow-y-auto",
+            "w-full"
+          ],
+          "childCount": 29
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "System Status",
+          "classes": [
+            "font-inter",
+            "tracking-tight",
+            "text-sm",
+            "font-semibold",
+            "uppercase",
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80",
+            "px-3",
+            "py-2",
+            "rounded"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "classes": [
+            "font-inter",
+            "tracking-tight",
+            "text-sm",
+            "font-semibold",
+            "uppercase",
+            "text-slate-400",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80",
+            "px-3",
+            "py-2",
+            "rounded",
+            "border",
+            "border-slate-700"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "text-slate-400",
+            "hover:text-slate-100",
+            "transition-colors",
+            "duration-150"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "classes": [
+            "text-slate-400",
+            "hover:text-slate-100",
+            "transition-colors",
+            "duration-150"
+          ],
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Export",
+          "classes": [
+            "h-touch_target",
+            "px-md",
+            "rounded",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "more_horiz",
+          "classes": [
+            "text-primary",
+            "hover:text-primary-fixed",
+            "transition-colors"
+          ],
+          "icon": "more_horiz",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "potted_plant",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "science",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "warning",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings_suggest",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "history",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "help_outline",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "terminal",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "notifications",
+        "emergency_home",
+        "dashboard",
+        "potted_plant",
+        "science",
+        "warning",
+        "settings_suggest",
+        "history",
+        "settings",
+        "help_outline",
+        "terminal",
+        "download",
+        "eco",
+        "trending_up",
+        "water_drop",
+        "trending_flat",
+        "more_horiz"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDTkzGmd1mtB3RsjV9HuzaYtxz3uLMVMM8d_rSXiRaTcuJt3MRZ5wYr8BTsWnOFl8QW-nxVvMkXOyDbOByAjRNdDB0_KhGM5DxepkdjmK5urk_6-nbB78_MYJtxEK8ER9E2y_bGAltSFXuVlzQNUx",
+          "alt": "Crew Member Profile"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDXKS7PCU8ijurEX67HOIGT_S2p7Zo5svXr_aJYwEpjnGXTRcJwDezQnqXxfMLMQOMX1O-WMAgXC0Pap2GDMeNk7CrCJdo8r-uYuGZ7PI5abNYQ46fmgVXwRB1EeqFYCPBWeUmYD4MCncrvmZc4RR",
+          "alt": "Greenhouse Module Alpha"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-secondary-fixed-variant": "#39485a",
+        "on-primary-fixed-variant": "#003ea8",
+        "on-tertiary-fixed": "#360f00",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "surface-container-highest": "#32343d",
+        "surface-container-high": "#282a32",
+        "on-primary": "#002a78",
+        "primary-container": "#2563eb",
+        "on-surface-variant": "#c3c6d7",
+        "on-tertiary-container": "#ffede6",
+        "surface-container": "#1d1f27",
+        "background": "#11131b",
+        "surface-bright": "#373942",
+        "secondary-fixed-dim": "#b9c8de",
+        "on-background": "#e1e2ed",
+        "surface-container-lowest": "#0c0e16",
+        "surface": "#11131b",
+        "tertiary-fixed": "#ffdbcd",
+        "inverse-surface": "#e1e2ed",
+        "on-secondary-fixed": "#0d1c2d",
+        "on-error": "#690005",
+        "secondary": "#b9c8de",
+        "tertiary": "#ffb596",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "primary-fixed": "#dbe1ff",
+        "secondary-fixed": "#d4e4fa",
+        "surface-dim": "#11131b",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container-low": "#191b23",
+        "on-secondary-container": "#a7b6cc",
+        "on-surface": "#e1e2ed",
+        "outline": "#8d90a0",
+        "error-container": "#93000a",
+        "on-error-container": "#ffdad6",
+        "inverse-on-surface": "#2e3039",
+        "on-secondary": "#233143",
+        "primary-fixed-dim": "#b4c5ff",
+        "outline-variant": "#434655",
+        "on-primary-fixed": "#00174b",
+        "on-tertiary": "#581e00",
+        "error": "#ffb4ab",
+        "primary": "#b4c5ff",
+        "secondary-container": "#39485a",
+        "on-primary-container": "#eeefff",
+        "tertiary-container": "#bc4800",
+        "inverse-primary": "#0053db"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "4"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "System Status",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Export",
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "more_horiz",
+          "icon": "more_horiz",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "System Insights"
+    },
+    "ebabaa42fca44ed29ef32f8dc8a4239e": {
+      "screenId": "ebabaa42fca44ed29ef32f8dc8a4239e",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "bg-slate-900",
+            "h-screen",
+            "w-64",
+            "border-r",
+            "border-slate-700",
+            "flat",
+            "no",
+            "shadows",
+            "tonal-layers",
+            "fixed"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "bg-slate-950",
+            "flex",
+            "justify-between",
+            "items-center",
+            "h-16",
+            "px-6",
+            "w-full",
+            "sticky",
+            "top-0",
+            "z-50"
+          ],
+          "childCount": 6
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-grow",
+            "flex",
+            "items-center",
+            "justify-center",
+            "p-md",
+            "bg-background"
+          ],
+          "childCount": 4
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "System Status",
+          "classes": [
+            "px-4",
+            "h-8",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-xs",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "classes": [
+            "px-4",
+            "h-8",
+            "bg-primary-container",
+            "text-on-primary-container",
+            "rounded",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-xs",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "w-8",
+            "h-8",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "rounded",
+            "cursor-pointer",
+            "active:opacity-80",
+            "text-blue-500",
+            "border-b-2",
+            "border-blue-600"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "classes": [
+            "w-8",
+            "h-8",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:bg-slate-800",
+            "transition-colors",
+            "duration-150",
+            "rounded",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Sync",
+          "classes": [
+            "h-touch_target",
+            "px-8",
+            "bg-primary-container",
+            "text-on-primary-container",
+            "font-label-caps",
+            "text-label-caps",
+            "rounded",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:bg-primary",
+            "transition-colors",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background"
+          ],
+          "icon": null,
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Clear Local Cache & Reset",
+          "classes": [
+            "h-touch_target",
+            "px-8",
+            "bg-transparent",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "font-label-caps",
+            "text-label-caps",
+            "rounded",
+            "flex",
+            "items-center",
+            "justify-center",
+            "hover:bg-surface-bright",
+            "transition-colors",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background"
+          ],
+          "icon": null,
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "SEARCH SYSTEM...",
+          "placeholder": "SEARCH SYSTEM...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-background",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "text-xs",
+            "h-8",
+            "pl-9",
+            "pr-3",
+            "rounded",
+            "focus:outline-none",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "transition-colors",
+            "placeholder:text-outline"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "potted_plant",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "science",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]",
+            "fill"
+          ],
+          "icon": "warning",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "settings_suggest",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "history",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "help_outline",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "terminal",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "potted_plant",
+        "science",
+        "warning",
+        "settings_suggest",
+        "history",
+        "settings",
+        "help_outline",
+        "terminal",
+        "search",
+        "notifications",
+        "emergency_home",
+        "error"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAao1C93_qEs8Dq870oiKFiRSSJ2ySDC8lHXqJx_qitiQgkDqT6SpYZ9uwNCTWxE22OukyqWDxqIejVmkGGNCxkx4u4uRSbGlTmUFhgWAAHztPJaCiNp_Ja7YHobmTdCj9RUePClbY0vT9PJrUFme",
+          "alt": "Greenhouse Module Alpha"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuC99OHbKyOJEoPoCJyncdPkJhCMrTuL_aGfxvoNGzU_-fEvmjaXsLBf8gzyQkwoXCJm5mn6WCLJoyqDPQfk4MMWMAO_HOh8m72rwBkqMGHuWdfnH3RROag48mcQ2OqrW0l_J7t-lYtL_f_8Er_-W4",
+          "alt": "Crew Member Profile"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-secondary-fixed-variant": "#39485a",
+        "on-primary-fixed-variant": "#003ea8",
+        "on-tertiary-fixed": "#360f00",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "surface-container-highest": "#32343d",
+        "surface-container-high": "#282a32",
+        "on-primary": "#002a78",
+        "primary-container": "#2563eb",
+        "on-surface-variant": "#c3c6d7",
+        "on-tertiary-container": "#ffede6",
+        "surface-container": "#1d1f27",
+        "background": "#11131b",
+        "surface-bright": "#373942",
+        "secondary-fixed-dim": "#b9c8de",
+        "on-background": "#e1e2ed",
+        "surface-container-lowest": "#0c0e16",
+        "surface": "#11131b",
+        "tertiary-fixed": "#ffdbcd",
+        "inverse-surface": "#e1e2ed",
+        "on-secondary-fixed": "#0d1c2d",
+        "on-error": "#690005",
+        "secondary": "#b9c8de",
+        "tertiary": "#ffb596",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "primary-fixed": "#dbe1ff",
+        "secondary-fixed": "#d4e4fa",
+        "surface-dim": "#11131b",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container-low": "#191b23",
+        "on-secondary-container": "#a7b6cc",
+        "on-surface": "#e1e2ed",
+        "outline": "#8d90a0",
+        "error-container": "#93000a",
+        "on-error-container": "#ffdad6",
+        "inverse-on-surface": "#2e3039",
+        "on-secondary": "#233143",
+        "primary-fixed-dim": "#b4c5ff",
+        "outline-variant": "#434655",
+        "on-primary-fixed": "#00174b",
+        "on-tertiary": "#581e00",
+        "error": "#ffb4ab",
+        "primary": "#b4c5ff",
+        "secondary-container": "#39485a",
+        "on-primary-container": "#eeefff",
+        "tertiary-container": "#bc4800",
+        "inverse-primary": "#0053db"
+      },
+      "fonts": [
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "4"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "System Status",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sync Data",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "emergency_home",
+          "icon": "emergency_home",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Sync",
+          "icon": null,
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Clear Local Cache & Reset",
+          "icon": null,
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "SEARCH SYSTEM...",
+          "type": "text",
+          "placeholder": "SEARCH SYSTEM...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "ORBITAL_GEN_1 Sector 7G - Active",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Crop Bays",
+          "icon": "potted_plant",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Nutrient Mixes",
+          "icon": "science",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "warning",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Maintenance",
+          "icon": "settings_suggest",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Timeline",
+          "icon": "history",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Support",
+          "icon": "help_outline",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "terminal",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "System Error"
+    }
+  }
+}

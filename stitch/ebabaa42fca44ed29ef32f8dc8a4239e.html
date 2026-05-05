@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>System Error State</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#39485a",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "surface-container-highest": "#32343d",
+                        "surface-container-high": "#282a32",
+                        "on-primary": "#002a78",
+                        "primary-container": "#2563eb",
+                        "on-surface-variant": "#c3c6d7",
+                        "on-tertiary-container": "#ffede6",
+                        "surface-container": "#1d1f27",
+                        "background": "#11131b",
+                        "surface-bright": "#373942",
+                        "secondary-fixed-dim": "#b9c8de",
+                        "on-background": "#e1e2ed",
+                        "surface-container-lowest": "#0c0e16",
+                        "surface": "#11131b",
+                        "tertiary-fixed": "#ffdbcd",
+                        "inverse-surface": "#e1e2ed",
+                        "on-secondary-fixed": "#0d1c2d",
+                        "on-error": "#690005",
+                        "secondary": "#b9c8de",
+                        "tertiary": "#ffb596",
+                        "surface-variant": "#32343d",
+                        "surface-tint": "#b4c5ff",
+                        "primary-fixed": "#dbe1ff",
+                        "secondary-fixed": "#d4e4fa",
+                        "surface-dim": "#11131b",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface-container-low": "#191b23",
+                        "on-secondary-container": "#a7b6cc",
+                        "on-surface": "#e1e2ed",
+                        "outline": "#8d90a0",
+                        "error-container": "#93000a",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#2e3039",
+                        "on-secondary": "#233143",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "outline-variant": "#434655",
+                        "on-primary-fixed": "#00174b",
+                        "on-tertiary": "#581e00",
+                        "error": "#ffb4ab",
+                        "primary": "#b4c5ff",
+                        "secondary-container": "#39485a",
+                        "on-primary-container": "#eeefff",
+                        "tertiary-container": "#bc4800",
+                        "inverse-primary": "#0053db"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "margin": "24px",
+                        "unit": "4px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "touch_target": "44px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Inter"],
+                        "mono-data": ["system-ui"],
+                        "body-lg": ["Inter"],
+                        "h2": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "h3": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "mono-data": ["13px", { "lineHeight": "16px", "letterSpacing": "0", "fontWeight": "500" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "h2": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "h3": ["18px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #0F172A; } /* Fallback background for edge cases */
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.fill { font-variation-settings: 'FILL' 1; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex font-body-md overflow-hidden antialiased">
+<!-- SideNavBar -->
+<nav class="bg-slate-900 h-screen w-64 border-r border-slate-700 flat no shadows tonal-layers fixed left-0 top-0 flex flex-col pt-16 z-40">
+<!-- Header -->
+<div class="px-6 pb-8 pt-4">
+<div class="flex items-center gap-4 mb-2">
+<img alt="Greenhouse Module Alpha" class="w-10 h-10 rounded border border-outline-variant object-cover" data-alt="A highly detailed, macro shot of a glowing, translucent green synthetic leaf inside a high-tech orbital greenhouse module. The lighting is pristine white, contrasting starkly with the deep space black background. The mood is scientific, sterile, and advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAao1C93_qEs8Dq870oiKFiRSSJ2ySDC8lHXqJx_qitiQgkDqT6SpYZ9uwNCTWxE22OukyqWDxqIejVmkGGNCxkx4u4uRSbGlTmUFhgWAAHztPJaCiNp_Ja7YHobmTdCj9RUePClbY0vT9PJrUFmebjT_P1CqJrIcX9R1GLGVP4dTi_ns7RYNTsqY1urf_aiOop3m1jWAZYLGTfN2iAP7A0S-u1i-yHxxfKSmzwmLpumZoXcgGBkPtjqQWMawfBTx0vsdk8Jb9klSA"/>
+<div>
+<h2 class="font-h3 text-h3 text-on-surface">ORBITAL_GEN_1</h2>
+<p class="font-mono-data text-mono-data text-on-surface-variant mt-1">Sector 7G - Active</p>
+</div>
+</div>
+</div>
+<!-- Main Tabs -->
+<div class="flex flex-col flex-grow overflow-y-auto font-inter text-xs font-medium uppercase tracking-wider text-slate-400">
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+                Dashboard
+            </a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+<span class="material-symbols-outlined text-[20px]">potted_plant</span>
+                Crop Bays
+            </a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+<span class="material-symbols-outlined text-[20px]">science</span>
+                Nutrient Mixes
+            </a>
+<!-- Active Tab -->
+<a class="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+<span class="material-symbols-outlined text-[20px] fill">warning</span>
+                Alerts
+            </a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+<span class="material-symbols-outlined text-[20px]">settings_suggest</span>
+                Maintenance
+            </a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+<span class="material-symbols-outlined text-[20px]">history</span>
+                Timeline
+            </a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+                Settings
+            </a>
+</div>
+<!-- Footer Tabs -->
+<div class="mt-auto border-t border-slate-700 font-inter text-xs font-medium uppercase tracking-wider text-slate-400 pb-4 pt-2">
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+<span class="material-symbols-outlined text-[20px]">help_outline</span>
+                Support
+            </a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+                Logs
+            </a>
+</div>
+</nav>
+<!-- Main Workspace -->
+<div class="flex-grow flex flex-col ml-64 relative min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-slate-950 flex justify-between items-center h-16 px-6 w-full sticky top-0 z-50 docked full-width border-b border-slate-700 flat no shadows text-slate-400 font-inter tracking-tight text-sm font-semibold uppercase">
+<!-- Brand & Search -->
+<div class="flex items-center gap-8 flex-1">
+<div class="text-lg font-black tracking-widest text-blue-600">
+                    ORBITAL_GRO_V4
+                </div>
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px]">search</span>
+<input class="w-full bg-background border border-outline-variant text-on-surface text-xs h-8 pl-9 pr-3 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-outline" placeholder="SEARCH SYSTEM..." type="text"/>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="px-4 h-8 border border-outline-variant rounded flex items-center justify-center text-xs hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80">
+                    System Status
+                </button>
+<button class="px-4 h-8 bg-primary-container text-on-primary-container rounded flex items-center justify-center text-xs hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80">
+                    Sync Data
+                </button>
+<div class="h-6 w-px bg-slate-700 mx-2"></div>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 flex items-center justify-center hover:bg-slate-800 transition-colors duration-150 rounded cursor-pointer active:opacity-80 text-blue-500 border-b-2 border-blue-600">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center hover:bg-slate-800 transition-colors duration-150 rounded cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-[20px]">emergency_home</span>
+</button>
+</div>
+<img alt="Crew Member Profile" class="w-8 h-8 rounded-full border border-outline-variant ml-2 object-cover cursor-pointer hover:opacity-80 transition-opacity" data-alt="A tightly framed portrait of an astronaut inside a dimly lit orbital command module. The ambient light is a cool blue, reflecting off the visor of a sleek, dark helmet. The mood is serious, focused, and cinematic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC99OHbKyOJEoPoCJyncdPkJhCMrTuL_aGfxvoNGzU_-fEvmjaXsLBf8gzyQkwoXCJm5mn6WCLJoyqDPQfk4MMWMAO_HOh8m72rwBkqMGHuWdfnH3RROag48mcQ2OqrW0l_J7t-lYtL_f_8Er_-W4s2jT4dSxzyrgDCSR7ZDjWJL1H3I15aebGiV_EaZOBEJRpRUy1ozqSE4_jk_E7Er78oX-wt4cdbwoKLtHH7er2blMnEPiRkqrVtmIgdc_Zwvc5BZTQs1_dH3xs"/>
+</div>
+</header>
+<!-- Content Canvas (System Error State) -->
+<main class="flex-grow flex items-center justify-center p-md bg-background">
+<div class="w-full max-w-lg bg-surface-container-high border border-outline-variant rounded-xl p-xl flex flex-col items-center text-center shadow-2xl shadow-black/50">
+<!-- Error Icon -->
+<div class="w-24 h-24 rounded-full bg-error-container/20 border border-error-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[48px] text-error fill">error</span>
+</div>
+<!-- Typography -->
+<h1 class="font-h2 text-h2 text-on-surface mb-3 tracking-tight">System Sync Failure</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-md">
+                    Data persistence error detected in sector storage. Critical telemetry from Sector 7G cannot be written to the primary array.
+                </p>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+<button class="h-touch_target px-8 bg-primary-container text-on-primary-container font-label-caps text-label-caps rounded flex items-center justify-center hover:bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background">
+                        Retry Sync
+                    </button>
+<button class="h-touch_target px-8 bg-transparent border border-outline-variant text-on-surface font-label-caps text-label-caps rounded flex items-center justify-center hover:bg-surface-bright transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background">
+                        Clear Local Cache &amp; Reset
+                    </button>
+</div>
+<!-- Diagnostic Code -->
+<div class="mt-10 pt-6 border-t border-outline-variant w-full flex justify-between items-center text-on-surface-variant font-mono-data text-mono-data">
+<span>ERR_CODE: 0x88F9_A</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error animate-pulse"></span> Offline</span>
+</div>
+</div>
+</main>
+</div>
+</body></html>
