@@ -8,10 +8,23 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface ConfigureCropBayProps {}
+interface ConfigureCropBayProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
 
+function navLinkClasses(isActive: boolean) {
+  return isActive
+    ? "bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600"
+    : "text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600";
+}
 export function ConfigureCropBay(props: ConfigureCropBayProps) {
+  const { state, dispatch, navigate } = props;
+  const route = state.currentRoute;
+
   return (
     <>
       {/* SideNavBar */}
@@ -22,42 +35,42 @@ export function ConfigureCropBay(props: ConfigureCropBayProps) {
       <p className="font-label-caps text-label-caps text-on-surface-variant uppercase">Sector 7G - Active</p>
       </div>
       <div className="flex-1 overflow-y-auto py-4 flex flex-col gap-unit">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 0"}}>dashboard</span>
                       Dashboard
                   </a>
       {/* Active Tab: Crop Bays */}
-      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className={navLinkClasses(route === '/crop-bays')} href="#/crop-bays" onClick={(e) => { e.preventDefault(); navigate('/crop-bays'); }}>
       <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 1"}}>potted_plant</span>
                       Crop Bays
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/nutrient-mixes" onClick={(e) => { e.preventDefault(); navigate('/nutrient-mixes'); }}>
       <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 0"}}>science</span>
                       Nutrient Mixes
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/alerts" onClick={(e) => { e.preventDefault(); navigate('/alerts'); }}>
       <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 0"}}>warning</span>
                       Alerts
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/maintenance" onClick={(e) => { e.preventDefault(); navigate('/maintenance'); }}>
       <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 0"}}>settings_suggest</span>
                       Maintenance
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/timeline" onClick={(e) => { e.preventDefault(); navigate('/timeline'); }}>
       <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 0"}}>history</span>
                       Timeline
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/settings" onClick={(e) => { e.preventDefault(); navigate('/settings'); }}>
       <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 0"}}>settings</span>
                       Settings
                   </a>
       </div>
       <div className="mt-auto border-t border-slate-700 py-4 flex flex-col gap-unit">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 0"}}>help_outline</span>
                       Support
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/maintenance" onClick={(e) => { e.preventDefault(); navigate('/maintenance'); }}>
       <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 0"}}>terminal</span>
                       Logs
                   </a>
@@ -112,7 +125,7 @@ export function ConfigureCropBay(props: ConfigureCropBayProps) {
       {/* Page Header */}
       <div className="mb-lg pb-md border-b border-surface-container-highest">
       <div className="flex items-center gap-sm text-on-surface-variant font-label-caps text-label-caps mb-xs">
-      <a className="hover:text-primary transition-colors" href="#">CROP BAYS</a>
+      <a className="hover:text-primary transition-colors" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>CROP BAYS</a>
       <span className="material-symbols-outlined text-[14px]">chevron_right</span>
       <span className="text-primary">EDIT BAY</span>
       </div>

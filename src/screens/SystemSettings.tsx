@@ -8,10 +8,23 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface SystemSettingsProps {}
+interface SystemSettingsProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
 
+function navLinkClasses(isActive: boolean) {
+  return isActive
+    ? "bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600"
+    : "text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600";
+}
 export function SystemSettings(props: SystemSettingsProps) {
+  const { state, dispatch, navigate } = props;
+  const route = state.currentRoute;
+
   return (
     <>
       {/* SideNavBar (JSON Component) */}
@@ -30,43 +43,43 @@ export function SystemSettings(props: SystemSettingsProps) {
       <div className="flex-1 overflow-y-auto py-4">
       <ul className="flex flex-col gap-1">
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined">dashboard</span>
                               Dashboard
                           </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/crop-bays" onClick={(e) => { e.preventDefault(); navigate('/crop-bays'); }}>
       <span className="material-symbols-outlined">potted_plant</span>
                               Crop Bays
                           </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/nutrient-mixes" onClick={(e) => { e.preventDefault(); navigate('/nutrient-mixes'); }}>
       <span className="material-symbols-outlined">science</span>
                               Nutrient Mixes
                           </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/alerts" onClick={(e) => { e.preventDefault(); navigate('/alerts'); }}>
       <span className="material-symbols-outlined">warning</span>
                               Alerts
                           </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/maintenance" onClick={(e) => { e.preventDefault(); navigate('/maintenance'); }}>
       <span className="material-symbols-outlined">settings_suggest</span>
                               Maintenance
                           </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/timeline" onClick={(e) => { e.preventDefault(); navigate('/timeline'); }}>
       <span className="material-symbols-outlined">history</span>
                               Timeline
                           </a>
       </li>
       <li>
-      <a aria-current="page" className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a aria-current="page" className={navLinkClasses(route === '/settings')} href="#/settings" onClick={(e) => { e.preventDefault(); navigate('/settings'); }}>
       <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 1"}}>settings</span>
                               Settings
                           </a>
@@ -76,13 +89,13 @@ export function SystemSettings(props: SystemSettingsProps) {
       <div className="border-t border-slate-700 p-4">
       <ul className="flex flex-col gap-1">
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined">help_outline</span>
                               Support
                           </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/maintenance" onClick={(e) => { e.preventDefault(); navigate('/maintenance'); }}>
       <span className="material-symbols-outlined">terminal</span>
                               Logs
                           </a>
@@ -103,18 +116,18 @@ export function SystemSettings(props: SystemSettingsProps) {
       </div>
       </div>
       <div className="flex items-center gap-4">
-      <button className="hidden md:flex items-center justify-center h-touch_target px-4 border border-slate-700 text-slate-300 font-label-caps text-label-caps rounded-DEFAULT hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80">
+      <button onClick={() => navigate('/settings')} className="hidden md:flex items-center justify-center h-touch_target px-4 border border-slate-700 text-slate-300 font-label-caps text-label-caps rounded-DEFAULT hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80">
                           System Status
                       </button>
-      <button className="hidden md:flex items-center justify-center h-touch_target px-4 bg-primary-container text-on-primary-container font-label-caps text-label-caps rounded-DEFAULT hover:bg-blue-700 transition-colors duration-150 cursor-pointer active:opacity-80">
+      <button onClick={() => { dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() }); }} className="hidden md:flex items-center justify-center h-touch_target px-4 bg-primary-container text-on-primary-container font-label-caps text-label-caps rounded-DEFAULT hover:bg-blue-700 transition-colors duration-150 cursor-pointer active:opacity-80">
                           Sync Data
                       </button>
       <div className="flex items-center gap-2 border-l border-slate-700 pl-4 ml-2">
-      <button className="w-10 h-10 flex items-center justify-center text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 rounded-DEFAULT relative">
+      <button onClick={() => navigate('/alerts')} className="w-10 h-10 flex items-center justify-center text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 rounded-DEFAULT relative">
       <span className="material-symbols-outlined">notifications</span>
       <span className="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
       </button>
-      <button className="w-10 h-10 flex items-center justify-center text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 rounded-DEFAULT">
+      <button onClick={() => navigate('/maintenance')} className="w-10 h-10 flex items-center justify-center text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 rounded-DEFAULT">
       <span className="material-symbols-outlined">emergency_home</span>
       </button>
       <div className="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 ml-2 overflow-hidden cursor-pointer">
@@ -132,11 +145,11 @@ export function SystemSettings(props: SystemSettingsProps) {
       <p className="font-body-md text-body-md text-on-surface-variant">Configure primary orbital operating parameters.</p>
       </div>
       <div className="flex gap-3">
-      <button className="h-touch_target px-md flex items-center justify-center gap-2 border border-outline-variant text-on-surface rounded-DEFAULT hover:bg-surface-variant transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background outline-none">
+      <button onClick={() => { dispatch({ type: 'UPDATE_SETTINGS', payload: { temperatureUnit: 'C', humidityUnit: '%', notificationsEnabled: true, autoSync: false, darkMode: true } }); }} className="h-touch_target px-md flex items-center justify-center gap-2 border border-outline-variant text-on-surface rounded-DEFAULT hover:bg-surface-variant transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background outline-none">
       <span className="material-symbols-outlined text-[18px]">restart_alt</span>
       <span className="font-label-caps text-label-caps">Reset Defaults</span>
       </button>
-      <button className="h-touch_target px-md flex items-center justify-center gap-2 bg-primary-container text-on-primary-container rounded-DEFAULT hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background outline-none">
+      <button onClick={() => { dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() }); }} className="h-touch_target px-md flex items-center justify-center gap-2 bg-primary-container text-on-primary-container rounded-DEFAULT hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background outline-none">
       <span className="material-symbols-outlined text-[18px]">save</span>
       <span className="font-label-caps text-label-caps">Apply Changes</span>
       </button>
@@ -216,11 +229,11 @@ export function SystemSettings(props: SystemSettingsProps) {
       </div>
       {/* Actions */}
       <div className="flex flex-col gap-3 mt-auto pt-4">
-      <button className="h-touch_target w-full flex items-center justify-center gap-2 border border-[#334155] text-on-surface rounded-DEFAULT hover:bg-surface-variant transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background outline-none">
+      <button onClick={() => { dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'CSV log exported successfully' } }); }} className="h-touch_target w-full flex items-center justify-center gap-2 border border-[#334155] text-on-surface rounded-DEFAULT hover:bg-surface-variant transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background outline-none">
       <span className="material-symbols-outlined text-[18px]">download</span>
       <span className="font-label-caps text-label-caps">Export CSV Log</span>
       </button>
-      <button className="h-touch_target w-full flex items-center justify-center gap-2 border border-error/50 text-error rounded-DEFAULT hover:bg-error/10 transition-colors focus:ring-2 focus:ring-error focus:ring-offset-2 focus:ring-offset-background outline-none">
+      <button onClick={() => { dispatch({ type: 'HYDRATE', payload: { ...state, notifications: [], alerts: [], lastSync: null } }); }} className="h-touch_target w-full flex items-center justify-center gap-2 border border-error/50 text-error rounded-DEFAULT hover:bg-error/10 transition-colors focus:ring-2 focus:ring-error focus:ring-offset-2 focus:ring-offset-background outline-none">
       <span className="material-symbols-outlined text-[18px]">delete_forever</span>
       <span className="font-label-caps text-label-caps">Clear Local Storage</span>
       </button>
