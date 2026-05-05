@@ -1,0 +1,1727 @@
+[
+  {
+    "screenId": "b73123b8034f4616a351ab5ed3dcae55",
+    "screenTitle": "No Active Modules",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 125
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 129
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 133
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 137
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 141
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 145
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 149
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 155
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 159
+      },
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 173
+      },
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 176
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 180
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 183
+      },
+      {
+        "type": "button",
+        "label": "Initialize New Bay",
+        "line": 214
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 125
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 129
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 133
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 137
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 141
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 145
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 149
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 155
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 159
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 173
+      },
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 176
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 180
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 183
+      },
+      {
+        "type": "button",
+        "label": "Initialize New Bay",
+        "line": 214
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 14,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "1115c152d622453b86b5963c5a2e169e",
+    "screenTitle": "Configure Crop Bay",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 117
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 122
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 126
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 130
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 134
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 138
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 142
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 148
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 152
+      },
+      {
+        "type": "link",
+        "label": "CROP BAYS",
+        "href": "#",
+        "line": 207
+      },
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 177
+      },
+      {
+        "type": "button",
+        "label": "Data",
+        "line": 181
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 187
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 191
+      },
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 295
+      },
+      {
+        "type": "button",
+        "label": "Bay",
+        "line": 298
+      },
+      {
+        "type": "input",
+        "label": "Search parameters...",
+        "inputType": "text",
+        "placeholder": "Search parameters...",
+        "line": 171
+      },
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 220
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 237
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 249
+      },
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 262
+      },
+      {
+        "type": "input",
+        "label": "number",
+        "inputType": "number",
+        "line": 273
+      },
+      {
+        "type": "input",
+        "label": "time",
+        "inputType": "time",
+        "line": 284
+      },
+      {
+        "type": "input",
+        "label": "time",
+        "inputType": "time",
+        "line": 288
+      },
+      {
+        "type": "form",
+        "label": "form",
+        "line": 215
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 117
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 122
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 126
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 130
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 134
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 138
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 142
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 148
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 152
+      },
+      {
+        "type": "link",
+        "label": "CROP BAYS",
+        "href": "#",
+        "line": 207
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 177
+      },
+      {
+        "type": "button",
+        "label": "Data",
+        "line": 181
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 187
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 191
+      },
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 295
+      },
+      {
+        "type": "button",
+        "label": "Bay",
+        "line": 298
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search parameters...",
+        "inputType": "text",
+        "placeholder": "Search parameters...",
+        "line": 171
+      },
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 220
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 237
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 249
+      },
+      {
+        "type": "input",
+        "label": "text",
+        "inputType": "text",
+        "line": 262
+      },
+      {
+        "type": "input",
+        "label": "number",
+        "inputType": "number",
+        "line": 273
+      },
+      {
+        "type": "input",
+        "label": "time",
+        "inputType": "time",
+        "line": 284
+      },
+      {
+        "type": "input",
+        "label": "time",
+        "inputType": "time",
+        "line": 288
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 25,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "4aee37e26b5e4af9bb51001763ff75d0",
+    "screenTitle": "Crew Member Profile",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 155
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 159
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 163
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 167
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 171
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 175
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 181
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 185
+      },
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 123
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 125
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 128
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 222
+      },
+      {
+        "type": "button",
+        "label": "END SHIFT &amp;",
+        "line": 306
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 155
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 159
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 163
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 167
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 171
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 175
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 181
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 185
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 123
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 125
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 128
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 222
+      },
+      {
+        "type": "button",
+        "label": "END SHIFT &amp;",
+        "line": 306
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 14,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "ebabaa42fca44ed29ef32f8dc8a4239e",
+    "screenTitle": "System Error",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 125
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 129
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 133
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 138
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 142
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 146
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 157
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 161
+      },
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 183
+      },
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 186
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 191
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "Retry Sync",
+        "line": 215
+      },
+      {
+        "type": "button",
+        "label": "Clear Local Cache &amp; Reset",
+        "line": 218
+      },
+      {
+        "type": "input",
+        "label": "SEARCH SYSTEM...",
+        "inputType": "text",
+        "placeholder": "SEARCH SYSTEM...",
+        "line": 178
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 125
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 129
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 133
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 138
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 142
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 146
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 157
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 161
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 183
+      },
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 186
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 191
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "Retry Sync",
+        "line": 215
+      },
+      {
+        "type": "button",
+        "label": "Clear Local Cache &amp; Reset",
+        "line": 218
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "SEARCH SYSTEM...",
+        "inputType": "text",
+        "placeholder": "SEARCH SYSTEM...",
+        "line": 178
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 16,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "3d7bacbf38294ac0b84765ba286044b0",
+    "screenTitle": "System Settings",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 138
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 144
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 156
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 162
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 168
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 174
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 184
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 190
+      },
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 211
+      },
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 214
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 218
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 222
+      },
+      {
+        "type": "button",
+        "label": "Reset Defaults",
+        "line": 240
+      },
+      {
+        "type": "button",
+        "label": "Apply Changes",
+        "line": 244
+      },
+      {
+        "type": "button",
+        "label": "Export CSV Log",
+        "line": 324
+      },
+      {
+        "type": "button",
+        "label": "Clear Local Storage",
+        "line": 328
+      },
+      {
+        "type": "input",
+        "label": "QUERY SYSTEMS...",
+        "inputType": "text",
+        "placeholder": "QUERY SYSTEMS...",
+        "line": 207
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 267
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 274
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 289
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 349
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 360
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 371
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 138
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 144
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 156
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 162
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 168
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 174
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 184
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 190
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 211
+      },
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 214
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 218
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 222
+      },
+      {
+        "type": "button",
+        "label": "Reset Defaults",
+        "line": 240
+      },
+      {
+        "type": "button",
+        "label": "Apply Changes",
+        "line": 244
+      },
+      {
+        "type": "button",
+        "label": "Export CSV Log",
+        "line": 324
+      },
+      {
+        "type": "button",
+        "label": "Clear Local Storage",
+        "line": 328
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "QUERY SYSTEMS...",
+        "inputType": "text",
+        "placeholder": "QUERY SYSTEMS...",
+        "line": 207
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 267
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 274
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 289
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 349
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 360
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 371
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 24,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "85f2bf08ae414b6084b313d242dbee51",
+    "screenTitle": "Operations Dashboard",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 148
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 152
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 156
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 160
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 164
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 168
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 172
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 178
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 182
+      },
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 126
+      },
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 127
+      },
+      {
+        "type": "button",
+        "label": "ALL STATUS",
+        "line": 202
+      },
+      {
+        "type": "button",
+        "label": "NEW YIELD",
+        "line": 205
+      },
+      {
+        "type": "input",
+        "label": "Search bays, crops...",
+        "inputType": "text",
+        "placeholder": "Search bays, crops...",
+        "line": 199
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 148
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 152
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 156
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 160
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 164
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 168
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 172
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 178
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 182
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 126
+      },
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 127
+      },
+      {
+        "type": "button",
+        "label": "ALL STATUS",
+        "line": 202
+      },
+      {
+        "type": "button",
+        "label": "NEW YIELD",
+        "line": 205
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search bays, crops...",
+        "inputType": "text",
+        "placeholder": "Search bays, crops...",
+        "line": 199
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 14,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "eabd4de1cbd046c2b8ebbd87122dfdb8",
+    "screenTitle": "System Insights",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 147
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 153
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 159
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 165
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 171
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 177
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 183
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 193
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 199
+      },
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 116
+      },
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 117
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 120
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 123
+      },
+      {
+        "type": "button",
+        "label": "Export",
+        "line": 217
+      },
+      {
+        "type": "button",
+        "label": "more_horiz",
+        "line": 277
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 147
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 153
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 159
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 165
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 171
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 177
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 183
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 193
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 199
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 116
+      },
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 117
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 120
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 123
+      },
+      {
+        "type": "button",
+        "label": "Export",
+        "line": 217
+      },
+      {
+        "type": "button",
+        "label": "more_horiz",
+        "line": 277
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 15,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "8b9abc298d02489ca0a466a351531de5",
+    "screenTitle": "Crop Bay Alpha-1 Detail",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 125
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 130
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 135
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 140
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 145
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 155
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 161
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 165
+      },
+      {
+        "type": "button",
+        "label": "menu",
+        "line": 178
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 187
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 190
+      },
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 195
+      },
+      {
+        "type": "button",
+        "label": "Flush System",
+        "line": 208
+      },
+      {
+        "type": "button",
+        "label": "Configuration",
+        "line": 212
+      },
+      {
+        "type": "button",
+        "label": "Trigger Manual Harvest",
+        "line": 216
+      },
+      {
+        "type": "button",
+        "label": "Expand View",
+        "line": 341
+      },
+      {
+        "type": "button",
+        "label": "View Full Log",
+        "line": 392
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 125
+      },
+      {
+        "type": "link",
+        "label": "Crop Bays",
+        "href": "#",
+        "line": 130
+      },
+      {
+        "type": "link",
+        "label": "Nutrient Mixes",
+        "href": "#",
+        "line": 135
+      },
+      {
+        "type": "link",
+        "label": "Alerts",
+        "href": "#",
+        "line": 140
+      },
+      {
+        "type": "link",
+        "label": "Maintenance",
+        "href": "#",
+        "line": 145
+      },
+      {
+        "type": "link",
+        "label": "Timeline",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 155
+      },
+      {
+        "type": "link",
+        "label": "Support",
+        "href": "#",
+        "line": 161
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 165
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "menu",
+        "line": 178
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 187
+      },
+      {
+        "type": "button",
+        "label": "emergency_home",
+        "line": 190
+      },
+      {
+        "type": "button",
+        "label": "System Status",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "Sync Data",
+        "line": 195
+      },
+      {
+        "type": "button",
+        "label": "Flush System",
+        "line": 208
+      },
+      {
+        "type": "button",
+        "label": "Configuration",
+        "line": 212
+      },
+      {
+        "type": "button",
+        "label": "Trigger Manual Harvest",
+        "line": 216
+      },
+      {
+        "type": "button",
+        "label": "Expand View",
+        "line": 341
+      },
+      {
+        "type": "button",
+        "label": "View Full Log",
+        "line": 392
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 19,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
