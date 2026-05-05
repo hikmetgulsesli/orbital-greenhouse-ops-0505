@@ -8,10 +8,25 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface NoActiveModulesProps {}
+interface NoActiveModulesProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
+
+function navLinkClasses(isActive: boolean) {
+  return isActive
+    ? "bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600"
+    : "text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600";
+}
 
 export function NoActiveModules(props: NoActiveModulesProps) {
+  const { state, navigate } = props;
+  const route = state.currentRoute;
+  const isCropBaysActive = route === '/crop-bays' || route.startsWith('/crop-bays');
+  const isNutrientMixesActive = route === '/nutrient-mixes';
   return (
     <>
       {/* SideNavBar */}
@@ -21,41 +36,41 @@ export function NoActiveModules(props: NoActiveModulesProps) {
       <p className="font-mono-data text-mono-data text-slate-400 mt-xs">Sector 7G - Active</p>
       </div>
       <div className="flex-1 overflow-y-auto py-4 flex flex-col gap-unit">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className={navLinkClasses(route === '/')} href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined text-lg" data-icon="dashboard">dashboard</span>
                       Dashboard
                   </a>
-      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className={navLinkClasses(isCropBaysActive)} href="#/crop-bays" onClick={(e) => { e.preventDefault(); navigate('/crop-bays'); }}>
       <span className="material-symbols-outlined text-lg" data-icon="potted_plant">potted_plant</span>
                       Crop Bays
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className={navLinkClasses(isNutrientMixesActive)} href="#/nutrient-mixes" onClick={(e) => { e.preventDefault(); navigate('/nutrient-mixes'); }}>
       <span className="material-symbols-outlined text-lg" data-icon="science">science</span>
                       Nutrient Mixes
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className={navLinkClasses(route === '/alerts')} href="#/alerts" onClick={(e) => { e.preventDefault(); navigate('/alerts'); }}>
       <span className="material-symbols-outlined text-lg" data-icon="warning">warning</span>
                       Alerts
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className={navLinkClasses(route === '/maintenance')} href="#/maintenance" onClick={(e) => { e.preventDefault(); navigate('/maintenance'); }}>
       <span className="material-symbols-outlined text-lg" data-icon="settings_suggest">settings_suggest</span>
                       Maintenance
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className={navLinkClasses(route === '/timeline')} href="#/timeline" onClick={(e) => { e.preventDefault(); navigate('/timeline'); }}>
       <span className="material-symbols-outlined text-lg" data-icon="history">history</span>
                       Timeline
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className={navLinkClasses(route === '/settings')} href="#/settings" onClick={(e) => { e.preventDefault(); navigate('/settings'); }}>
       <span className="material-symbols-outlined text-lg" data-icon="settings">settings</span>
                       Settings
                   </a>
       </div>
       <div className="border-t border-slate-700 py-4 flex flex-col gap-unit">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined text-lg" data-icon="help_outline">help_outline</span>
                       Support
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/maintenance" onClick={(e) => { e.preventDefault(); navigate('/maintenance'); }}>
       <span className="material-symbols-outlined text-lg" data-icon="terminal">terminal</span>
                       Logs
                   </a>
@@ -69,20 +84,20 @@ export function NoActiveModules(props: NoActiveModulesProps) {
       <span className="text-lg font-black tracking-widest text-blue-600">ORBITAL_GRO_V4</span>
       </div>
       <div className="flex items-center gap-4">
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-4 py-2 rounded h-touch_target flex items-center justify-center border border-[#334155] font-label-caps text-label-caps uppercase">
+      <button onClick={() => navigate('/settings')} className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-4 py-2 rounded h-touch_target flex items-center justify-center border border-[#334155] font-label-caps text-label-caps uppercase">
                           System Status
                       </button>
-      <button className="bg-primary-container text-on-primary-container hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-4 py-2 rounded h-touch_target flex items-center justify-center font-label-caps text-label-caps uppercase">
+      <button onClick={() => { props.dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() }); }} className="bg-primary-container text-on-primary-container hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-4 py-2 rounded h-touch_target flex items-center justify-center font-label-caps text-label-caps uppercase">
                           Sync Data
                       </button>
       <div className="flex items-center gap-2 border-l border-slate-700 pl-4 ml-2">
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 w-touch_target h-touch_target rounded-full flex items-center justify-center">
+      <button onClick={() => navigate('/alerts')} className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 w-touch_target h-touch_target rounded-full flex items-center justify-center">
       <span className="material-symbols-outlined" data-icon="notifications">notifications</span>
       </button>
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 w-touch_target h-touch_target rounded-full flex items-center justify-center">
+      <button onClick={() => navigate('/maintenance')} className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 w-touch_target h-touch_target rounded-full flex items-center justify-center">
       <span className="material-symbols-outlined" data-icon="emergency_home">emergency_home</span>
       </button>
-      <div className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant overflow-hidden ml-2 flex items-center justify-center">
+      <div onClick={() => navigate('/profile')} className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant overflow-hidden ml-2 flex items-center justify-center cursor-pointer hover:bg-slate-800 transition-colors">
       <span className="material-symbols-outlined text-on-surface-variant" data-icon="person">person</span>
       </div>
       </div>
@@ -110,7 +125,7 @@ export function NoActiveModules(props: NoActiveModulesProps) {
       <p className="font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto mb-xl">
                           Initialize your first greenhouse module to begin monitoring crop health, environmental controls, and nutrient flow.
                       </p>
-      <button className="bg-primary-container text-on-primary-container h-touch_target px-xl rounded font-label-caps text-label-caps inline-flex items-center justify-center gap-2 hover:bg-inverse-primary transition-colors focus:ring-2 focus:ring-primary-container focus:ring-offset-2 focus:ring-offset-background uppercase border border-[#334155]">
+      <button onClick={() => navigate('/configure-crop-bay')} className="bg-primary-container text-on-primary-container h-touch_target px-xl rounded font-label-caps text-label-caps inline-flex items-center justify-center gap-2 hover:bg-inverse-primary transition-colors focus:ring-2 focus:ring-primary-container focus:ring-offset-2 focus:ring-offset-background uppercase border border-[#334155]">
       <span className="material-symbols-outlined text-lg" data-icon="add">add</span>
                           Initialize New Bay
                       </button>

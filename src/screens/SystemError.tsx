@@ -8,10 +8,23 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface SystemErrorProps {}
+interface SystemErrorProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
 
+function navLinkClasses(isActive: boolean) {
+  return isActive
+    ? "bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600"
+    : "text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600";
+}
 export function SystemError(props: SystemErrorProps) {
+  const { state, dispatch, navigate } = props;
+  const route = state.currentRoute;
+
   return (
     <>
       {/* SideNavBar */}
@@ -28,43 +41,43 @@ export function SystemError(props: SystemErrorProps) {
       </div>
       {/* Main Tabs */}
       <div className="flex flex-col flex-grow overflow-y-auto font-inter text-xs font-medium uppercase tracking-wider text-slate-400">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined text-[20px]">dashboard</span>
                       Dashboard
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/crop-bays" onClick={(e) => { e.preventDefault(); navigate('/crop-bays'); }}>
       <span className="material-symbols-outlined text-[20px]">potted_plant</span>
                       Crop Bays
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/nutrient-mixes" onClick={(e) => { e.preventDefault(); navigate('/nutrient-mixes'); }}>
       <span className="material-symbols-outlined text-[20px]">science</span>
                       Nutrient Mixes
                   </a>
       {/* Active Tab */}
-      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className={navLinkClasses(route === '/alerts')} href="#/alerts" onClick={(e) => { e.preventDefault(); navigate('/alerts'); }}>
       <span className="material-symbols-outlined text-[20px] fill">warning</span>
                       Alerts
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/maintenance" onClick={(e) => { e.preventDefault(); navigate('/maintenance'); }}>
       <span className="material-symbols-outlined text-[20px]">settings_suggest</span>
                       Maintenance
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/timeline" onClick={(e) => { e.preventDefault(); navigate('/timeline'); }}>
       <span className="material-symbols-outlined text-[20px]">history</span>
                       Timeline
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/settings" onClick={(e) => { e.preventDefault(); navigate('/settings'); }}>
       <span className="material-symbols-outlined text-[20px]">settings</span>
                       Settings
                   </a>
       </div>
       {/* Footer Tabs */}
       <div className="mt-auto border-t border-slate-700 font-inter text-xs font-medium uppercase tracking-wider text-slate-400 pb-4 pt-2">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined text-[20px]">help_outline</span>
                       Support
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/maintenance" onClick={(e) => { e.preventDefault(); navigate('/maintenance'); }}>
       <span className="material-symbols-outlined text-[20px]">terminal</span>
                       Logs
                   </a>
@@ -118,10 +131,10 @@ export function SystemError(props: SystemErrorProps) {
                       </p>
       {/* Actions */}
       <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-      <button className="h-touch_target px-8 bg-primary-container text-on-primary-container font-label-caps text-label-caps rounded flex items-center justify-center hover:bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background">
+      <button onClick={() => { dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() }); }} className="h-touch_target px-8 bg-primary-container text-on-primary-container font-label-caps text-label-caps rounded flex items-center justify-center hover:bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background">
                               Retry Sync
                           </button>
-      <button className="h-touch_target px-8 bg-transparent border border-outline-variant text-on-surface font-label-caps text-label-caps rounded flex items-center justify-center hover:bg-surface-bright transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background">
+      <button onClick={() => { dispatch({ type: 'HYDRATE', payload: { ...state, alerts: [], notifications: [] } }); }} className="h-touch_target px-8 bg-transparent border border-outline-variant text-on-surface font-label-caps text-label-caps rounded flex items-center justify-center hover:bg-surface-bright transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background">
                               Clear Local Cache &amp; Reset
                           </button>
       </div>
