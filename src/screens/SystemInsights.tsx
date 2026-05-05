@@ -8,10 +8,23 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface SystemInsightsProps {}
+interface SystemInsightsProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
 
+function navLinkClasses(isActive: boolean) {
+  return isActive
+    ? "bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600"
+    : "text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600";
+}
 export function SystemInsights(props: SystemInsightsProps) {
+  const { state, dispatch, navigate } = props;
+  const route = state.currentRoute;
+
   return (
     <>
       {/* TopAppBar */}
@@ -21,14 +34,14 @@ export function SystemInsights(props: SystemInsightsProps) {
       </div>
       <div className="flex items-center gap-6">
       <div className="hidden md:flex gap-4">
-      <button className="font-inter tracking-tight text-sm font-semibold uppercase text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-3 py-2 rounded">System Status</button>
-      <button className="font-inter tracking-tight text-sm font-semibold uppercase text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-3 py-2 rounded border border-slate-700">Sync Data</button>
+      <button onClick={() => navigate('/settings')} className="font-inter tracking-tight text-sm font-semibold uppercase text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-3 py-2 rounded">System Status</button>
+      <button onClick={() => { dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() }); }} className="font-inter tracking-tight text-sm font-semibold uppercase text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-3 py-2 rounded border border-slate-700">Sync Data</button>
       </div>
       <div className="flex items-center gap-4">
-      <button className="text-slate-400 hover:text-slate-100 transition-colors duration-150">
+      <button onClick={() => navigate('/alerts')} className="text-slate-400 hover:text-slate-100 transition-colors duration-150">
       <span className="material-symbols-outlined">notifications</span>
       </button>
-      <button className="text-slate-400 hover:text-slate-100 transition-colors duration-150">
+      <button onClick={() => navigate('/maintenance')} className="text-slate-400 hover:text-slate-100 transition-colors duration-150">
       <span className="material-symbols-outlined">emergency_home</span>
       </button>
       <img alt="Crew Member Profile" className="w-8 h-8 rounded-full border border-slate-700" data-alt="A close-up portrait of an astronaut or scientist in a high-tech orbital command center. The lighting is cool and blue-tinted, reflecting off sleek control panels. The mood is serious and professional. The background is slightly blurred to focus on the person. The overall aesthetic is sci-fi realism with a corporate space industry vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTkzGmd1mtB3RsjV9HuzaYtxz3uLMVMM8d_rSXiRaTcuJt3MRZ5wYr8BTsWnOFl8QW-nxVvMkXOyDbOByAjRNdDB0_KhGM5DxepkdjmK5urk_6-nbB78_MYJtxEK8ER9E2y_bGAltSFXuVlzQNUxUfngzDfjb94SJeKaRFZnAGPSY5QX7kZDKZwM0Vf6BNicHqtBRGx0MVgPX-1XUir9HhxWugxZdxjRQUvsKU7t58Itl1CTxT-mpng_Mi0y3AJ3dCl73fv-5l7HE" />
@@ -52,43 +65,43 @@ export function SystemInsights(props: SystemInsightsProps) {
       <div className="flex-1 overflow-y-auto py-4">
       <ul className="space-y-1">
       <li>
-      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className={navLinkClasses(route === '/maintenance' || route === '/timeline')} href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined">dashboard</span>
                                   Dashboard
                               </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/crop-bays" onClick={(e) => { e.preventDefault(); navigate('/crop-bays'); }}>
       <span className="material-symbols-outlined">potted_plant</span>
                                   Crop Bays
                               </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/nutrient-mixes" onClick={(e) => { e.preventDefault(); navigate('/nutrient-mixes'); }}>
       <span className="material-symbols-outlined">science</span>
                                   Nutrient Mixes
                               </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/alerts" onClick={(e) => { e.preventDefault(); navigate('/alerts'); }}>
       <span className="material-symbols-outlined">warning</span>
                                   Alerts
                               </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/maintenance" onClick={(e) => { e.preventDefault(); navigate('/maintenance'); }}>
       <span className="material-symbols-outlined">settings_suggest</span>
                                   Maintenance
                               </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/timeline" onClick={(e) => { e.preventDefault(); navigate('/timeline'); }}>
       <span className="material-symbols-outlined">history</span>
                                   Timeline
                               </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/settings" onClick={(e) => { e.preventDefault(); navigate('/settings'); }}>
       <span className="material-symbols-outlined">settings</span>
                                   Settings
                               </a>
@@ -98,13 +111,13 @@ export function SystemInsights(props: SystemInsightsProps) {
       <div className="p-4 border-t border-slate-700">
       <ul className="space-y-1">
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined">help_outline</span>
                                   Support
                               </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/maintenance" onClick={(e) => { e.preventDefault(); navigate('/maintenance'); }}>
       <span className="material-symbols-outlined">terminal</span>
                                   Logs
                               </a>
@@ -122,7 +135,7 @@ export function SystemInsights(props: SystemInsightsProps) {
       <p className="font-body-lg text-body-lg text-on-surface-variant mt-2">Real-time metrics for all active orbital crop sectors.</p>
       </div>
       <div className="hidden sm:flex gap-2">
-      <button className="h-touch_target px-md rounded bg-surface border border-outline-variant text-on-surface font-label-caps text-label-caps hover:bg-surface-variant transition-colors flex items-center gap-2">
+      <button onClick={() => { dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Metrics exported to CSV' } }); }} className="h-touch_target px-md rounded bg-surface border border-outline-variant text-on-surface font-label-caps text-label-caps hover:bg-surface-variant transition-colors flex items-center gap-2">
       <span className="material-symbols-outlined text-[18px]">download</span>
                                   Export
                               </button>
@@ -182,7 +195,7 @@ export function SystemInsights(props: SystemInsightsProps) {
       <div className="col-span-1 md:col-span-12 bg-surface-container rounded-xl border border-outline-variant overflow-hidden">
       <div className="p-4 border-b border-surface-variant bg-surface-container-high flex justify-between items-center">
       <h3 className="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Sector Performance</h3>
-      <button className="text-primary hover:text-primary-fixed transition-colors">
+      <button onClick={() => { dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Sector performance options opened' } }); }} className="text-primary hover:text-primary-fixed transition-colors">
       <span className="material-symbols-outlined text-[20px]">more_horiz</span>
       </button>
       </div>

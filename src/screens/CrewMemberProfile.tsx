@@ -8,10 +8,23 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface CrewMemberProfileProps {}
+interface CrewMemberProfileProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
 
+function navLinkClasses(isActive: boolean) {
+  return isActive
+    ? "bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600"
+    : "text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600";
+}
 export function CrewMemberProfile(props: CrewMemberProfileProps) {
+  const { state, dispatch, navigate } = props;
+  const route = state.currentRoute;
+
   return (
     <>
       {/* TopAppBar JSON Anchor */}
@@ -21,16 +34,16 @@ export function CrewMemberProfile(props: CrewMemberProfileProps) {
       </div>
       <div className="flex items-center gap-lg">
       <span className="font-inter tracking-tight text-sm font-semibold uppercase text-slate-400">System Status</span>
-      <button className="font-inter tracking-tight text-sm font-semibold uppercase text-blue-600 cursor-pointer active:opacity-80 hover:bg-slate-800 transition-colors duration-150 px-md py-sm rounded-DEFAULT border border-transparent">Sync Data</button>
+      <button onClick={() => { dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() }); }} className="font-inter tracking-tight text-sm font-semibold uppercase text-blue-600 cursor-pointer active:opacity-80 hover:bg-slate-800 transition-colors duration-150 px-md py-sm rounded-DEFAULT border border-transparent">Sync Data</button>
       <div className="flex items-center gap-xs">
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-sm rounded-full cursor-pointer active:opacity-80 flex items-center justify-center h-touch_target w-touch_target">
+      <button onClick={() => navigate('/alerts')} className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-sm rounded-full cursor-pointer active:opacity-80 flex items-center justify-center h-touch_target w-touch_target">
       <span className="material-symbols-outlined">notifications</span>
       </button>
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-sm rounded-full cursor-pointer active:opacity-80 flex items-center justify-center h-touch_target w-touch_target">
+      <button onClick={() => navigate('/maintenance')} className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-sm rounded-full cursor-pointer active:opacity-80 flex items-center justify-center h-touch_target w-touch_target">
       <span className="material-symbols-outlined">emergency_home</span>
       </button>
       </div>
-      <button className="h-10 w-10 rounded-full overflow-hidden border-2 border-blue-600 ml-sm cursor-pointer hover:opacity-80 transition-opacity">
+      <button onClick={() => navigate('/profile')} className="h-10 w-10 rounded-full overflow-hidden border-2 border-blue-600 ml-sm cursor-pointer hover:opacity-80 transition-opacity">
       <img alt="Crew Member Profile" className="w-full h-full object-cover" data-alt="A striking portrait of a male astronaut or control room operator in a sleek, dark high-tech environment. The lighting is moody, with cool blue and stark white highlights reflecting off subtle metallic elements of his utilitarian dark uniform. His expression is serious, focused, and professional, embodying a calm, reliable interface aesthetic. The background is a blurred, deep slate-grey command center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcZnr33XdupB9c8b2gnggDA5EDCaFtbjsDVciBVSGN8RFXHPUa2CpHlkkO6osq7W7Z4clg0w9T0NS0S0_1SMqCrQmS0YbrIAE31w1qq7MCX7TrdOZ1n3ZMRQ7N0p4PdUgXSErH6JB0T3awlMv0YJmbNOGrQqfDGhD6e7CYBrcfnytFHg_mXO0QIC6qbT24iIwWcvVYofGRCBFWvdhjOnAcD-YWoU0NMs1VP0dfvD2c3ag_4gGsiPGLHmVtwuKE1yfGKWnwRmYZ8zA" />
       </button>
       </div>
@@ -48,42 +61,42 @@ export function CrewMemberProfile(props: CrewMemberProfileProps) {
       </div>
       <div className="flex-1 overflow-y-auto py-sm">
       {/* Active State Navigation */}
-      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 1"}}>dashboard</span>
       <span className="font-inter text-xs font-medium uppercase tracking-wider">Dashboard</span>
       </a>
       {/* Inactive State Navigation */}
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined">potted_plant</span>
       <span className="font-inter text-xs font-medium uppercase tracking-wider">Crop Bays</span>
       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined">science</span>
       <span className="font-inter text-xs font-medium uppercase tracking-wider">Nutrient Mixes</span>
       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined">warning</span>
       <span className="font-inter text-xs font-medium uppercase tracking-wider">Alerts</span>
       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined">settings_suggest</span>
       <span className="font-inter text-xs font-medium uppercase tracking-wider">Maintenance</span>
       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined">history</span>
       <span className="font-inter text-xs font-medium uppercase tracking-wider">Timeline</span>
       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined">settings</span>
       <span className="font-inter text-xs font-medium uppercase tracking-wider">Settings</span>
       </a>
       </div>
       <div className="border-t border-slate-700 py-sm">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined">help_outline</span>
       <span className="font-inter text-xs font-medium uppercase tracking-wider">Support</span>
       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined">terminal</span>
       <span className="font-inter text-xs font-medium uppercase tracking-wider">Logs</span>
       </a>
@@ -120,7 +133,7 @@ export function CrewMemberProfile(props: CrewMemberProfileProps) {
       <span className="material-symbols-outlined text-on-surface-variant">badge</span>
       <h2 className="font-h3 text-h3 text-on-surface uppercase tracking-wide">Crew Data File</h2>
       </div>
-      <button className="h-touch_target w-touch_target flex items-center justify-center rounded-DEFAULT text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors border border-transparent focus:ring-2 focus:ring-primary focus:outline-none focus:border-primary">
+      <button onClick={() => navigate('/')} className="h-touch_target w-touch_target flex items-center justify-center rounded-DEFAULT text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors border border-transparent focus:ring-2 focus:ring-primary focus:outline-none focus:border-primary">
       <span className="material-symbols-outlined">close</span>
       </button>
       </div>
@@ -204,7 +217,7 @@ export function CrewMemberProfile(props: CrewMemberProfileProps) {
       </div>
       {/* Panel Footer Actions */}
       <div className="p-lg bg-surface-container border-t border-outline-variant mt-auto">
-      <button className="w-full h-touch_target bg-error/10 border border-error text-error rounded-DEFAULT flex items-center justify-center gap-sm font-label-caps text-label-caps hover:bg-error hover:text-on-error transition-colors focus:ring-2 focus:ring-error focus:ring-offset-2 focus:ring-offset-surface">
+      <button onClick={() => { dispatch({ type: 'UPDATE_PROFILE', payload: { status: 'off-duty' } }); navigate('/'); }} className="w-full h-touch_target bg-error/10 border border-error text-error rounded-DEFAULT flex items-center justify-center gap-sm font-label-caps text-label-caps hover:bg-error hover:text-on-error transition-colors focus:ring-2 focus:ring-error focus:ring-offset-2 focus:ring-offset-surface">
       <span className="material-symbols-outlined text-[18px]">logout</span>
                           END SHIFT &amp; LOGOUT
                       </button>
