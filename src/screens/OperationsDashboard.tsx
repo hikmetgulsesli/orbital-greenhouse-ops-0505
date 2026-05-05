@@ -26,8 +26,8 @@ export function OperationsDashboard({ state, dispatch, navigate }: OperationsDas
       </div>
       <div className="flex items-center gap-lg">
       <div className="flex items-center gap-sm">
-      <button className="font-inter tracking-tight text-sm font-semibold uppercase text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-sm py-xs rounded">System Status</button>
-      <button className="font-inter tracking-tight text-sm font-semibold uppercase text-blue-600 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-sm py-xs rounded">Sync Data</button>
+      <button className="font-inter tracking-tight text-sm font-semibold uppercase text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-sm py-xs rounded" onClick={() => navigate('/settings')}>System Status</button>
+      <button className="font-inter tracking-tight text-sm font-semibold uppercase text-blue-600 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-sm py-xs rounded" onClick={() => dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() })}>Sync Data</button>
       </div>
       <div className="flex items-center gap-sm">
       <span className="material-symbols-outlined text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 p-xs rounded-full h-touch_target w-touch_target flex items-center justify-center" data-icon="notifications">notifications</span>
@@ -48,41 +48,41 @@ export function OperationsDashboard({ state, dispatch, navigate }: OperationsDas
       <span className="font-mono-data text-mono-data text-slate-500">Greenhouse Module Alpha</span>
       </div>
       <div className="flex-1 overflow-y-auto py-sm flex flex-col gap-unit">
-      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/')}>
       <span className="material-symbols-outlined" data-icon="dashboard">dashboard</span>
                           Dashboard
                       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/crop-bays')}>
       <span className="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
                           Crop Bays
                       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/nutrient-mixes')}>
       <span className="material-symbols-outlined" data-icon="science">science</span>
                           Nutrient Mixes
                       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/alerts')}>
       <span className="material-symbols-outlined" data-icon="warning">warning</span>
                           Alerts
                       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/maintenance')}>
       <span className="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
                           Maintenance
                       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/timeline')}>
       <span className="material-symbols-outlined" data-icon="history">history</span>
                           Timeline
                       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/settings')}>
       <span className="material-symbols-outlined" data-icon="settings">settings</span>
                           Settings
                       </a>
       </div>
       <div className="border-t border-slate-700 py-sm flex flex-col gap-unit">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/settings')}>
       <span className="material-symbols-outlined" data-icon="help_outline">help_outline</span>
                           Support
                       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/maintenance')}>
       <span className="material-symbols-outlined" data-icon="terminal">terminal</span>
                           Logs
                       </a>
@@ -99,13 +99,13 @@ export function OperationsDashboard({ state, dispatch, navigate }: OperationsDas
       <div className="flex items-center gap-md">
       <div className="relative flex items-center">
       <span className="material-symbols-outlined absolute left-sm text-on-surface-variant text-[18px]">search</span>
-      <input className="bg-surface-container-lowest border border-outline-variant text-on-surface rounded font-body-md text-body-md pl-xl pr-sm py-sm focus:border-primary-container focus:ring-1 focus:ring-primary-container focus:outline-none transition-all w-64 h-touch_target" placeholder="Search bays, crops..." type="text" />
+      <input className="bg-surface-container-lowest border border-outline-variant text-on-surface rounded font-body-md text-body-md pl-xl pr-sm py-sm focus:border-primary-container focus:ring-1 focus:ring-primary-container focus:outline-none transition-all w-64 h-touch_target" placeholder="Search bays, crops..." type="text"  onChange={(e) => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: e.target.value } })} />
       </div>
       <div className="flex gap-sm">
-      <button className="bg-surface-container border border-outline-variant text-on-surface rounded px-md h-touch_target flex items-center justify-center font-label-caps text-label-caps hover:bg-surface-container-highest transition-colors">
+      <button className="bg-surface-container border border-outline-variant text-on-surface rounded px-md h-touch_target flex items-center justify-center font-label-caps text-label-caps hover:bg-surface-container-highest transition-colors" onClick={() => navigate('/settings')}>
                                   ALL STATUS
                               </button>
-      <button className="bg-primary-container border border-primary-container text-on-primary-container rounded px-md h-touch_target flex items-center justify-center font-label-caps text-label-caps hover:brightness-110 transition-all">
+      <button className="bg-primary-container border border-primary-container text-on-primary-container rounded px-md h-touch_target flex items-center justify-center font-label-caps text-label-caps hover:brightness-110 transition-all" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Action: new yield' } })}>
                                   NEW YIELD
                               </button>
       </div>

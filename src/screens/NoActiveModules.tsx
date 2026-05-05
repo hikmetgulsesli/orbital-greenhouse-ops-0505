@@ -26,41 +26,41 @@ export function NoActiveModules({ state, dispatch, navigate }: NoActiveModulesPr
       <p className="font-mono-data text-mono-data text-slate-400 mt-xs">Sector 7G - Active</p>
       </div>
       <div className="flex-1 overflow-y-auto py-4 flex flex-col gap-unit">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/')}>
       <span className="material-symbols-outlined text-lg" data-icon="dashboard">dashboard</span>
                       Dashboard
                   </a>
-      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/crop-bays')}>
       <span className="material-symbols-outlined text-lg" data-icon="potted_plant">potted_plant</span>
                       Crop Bays
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/nutrient-mixes')}>
       <span className="material-symbols-outlined text-lg" data-icon="science">science</span>
                       Nutrient Mixes
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/alerts')}>
       <span className="material-symbols-outlined text-lg" data-icon="warning">warning</span>
                       Alerts
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/maintenance')}>
       <span className="material-symbols-outlined text-lg" data-icon="settings_suggest">settings_suggest</span>
                       Maintenance
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/timeline')}>
       <span className="material-symbols-outlined text-lg" data-icon="history">history</span>
                       Timeline
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/settings')}>
       <span className="material-symbols-outlined text-lg" data-icon="settings">settings</span>
                       Settings
                   </a>
       </div>
       <div className="border-t border-slate-700 py-4 flex flex-col gap-unit">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/settings')}>
       <span className="material-symbols-outlined text-lg" data-icon="help_outline">help_outline</span>
                       Support
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/maintenance')}>
       <span className="material-symbols-outlined text-lg" data-icon="terminal">terminal</span>
                       Logs
                   </a>
@@ -74,17 +74,17 @@ export function NoActiveModules({ state, dispatch, navigate }: NoActiveModulesPr
       <span className="text-lg font-black tracking-widest text-blue-600">ORBITAL_GRO_V4</span>
       </div>
       <div className="flex items-center gap-4">
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-4 py-2 rounded h-touch_target flex items-center justify-center border border-[#334155] font-label-caps text-label-caps uppercase">
+      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-4 py-2 rounded h-touch_target flex items-center justify-center border border-[#334155] font-label-caps text-label-caps uppercase" onClick={() => navigate('/settings')}>
                           System Status
                       </button>
-      <button className="bg-primary-container text-on-primary-container hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-4 py-2 rounded h-touch_target flex items-center justify-center font-label-caps text-label-caps uppercase">
+      <button className="bg-primary-container text-on-primary-container hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 px-4 py-2 rounded h-touch_target flex items-center justify-center font-label-caps text-label-caps uppercase" onClick={() => dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() })}>
                           Sync Data
                       </button>
       <div className="flex items-center gap-2 border-l border-slate-700 pl-4 ml-2">
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 w-touch_target h-touch_target rounded-full flex items-center justify-center">
+      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 w-touch_target h-touch_target rounded-full flex items-center justify-center" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined" data-icon="notifications">notifications</span>
       </button>
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 w-touch_target h-touch_target rounded-full flex items-center justify-center">
+      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 w-touch_target h-touch_target rounded-full flex items-center justify-center" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined" data-icon="emergency_home">emergency_home</span>
       </button>
       <div className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant overflow-hidden ml-2 flex items-center justify-center">
@@ -115,7 +115,7 @@ export function NoActiveModules({ state, dispatch, navigate }: NoActiveModulesPr
       <p className="font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto mb-xl">
                           Initialize your first greenhouse module to begin monitoring crop health, environmental controls, and nutrient flow.
                       </p>
-      <button className="bg-primary-container text-on-primary-container h-touch_target px-xl rounded font-label-caps text-label-caps inline-flex items-center justify-center gap-2 hover:bg-inverse-primary transition-colors focus:ring-2 focus:ring-primary-container focus:ring-offset-2 focus:ring-offset-background uppercase border border-[#334155]">
+      <button className="bg-primary-container text-on-primary-container h-touch_target px-xl rounded font-label-caps text-label-caps inline-flex items-center justify-center gap-2 hover:bg-inverse-primary transition-colors focus:ring-2 focus:ring-primary-container focus:ring-offset-2 focus:ring-offset-background uppercase border border-[#334155]" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined text-lg" data-icon="add">add</span>
                           Initialize New Bay
                       </button>

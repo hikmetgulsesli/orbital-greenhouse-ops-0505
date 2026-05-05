@@ -33,43 +33,43 @@ export function SystemError({ state, dispatch, navigate }: SystemErrorProps) {
       </div>
       {/* Main Tabs */}
       <div className="flex flex-col flex-grow overflow-y-auto font-inter text-xs font-medium uppercase tracking-wider text-slate-400">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/')}>
       <span className="material-symbols-outlined text-[20px]">dashboard</span>
                       Dashboard
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/crop-bays')}>
       <span className="material-symbols-outlined text-[20px]">potted_plant</span>
                       Crop Bays
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/nutrient-mixes')}>
       <span className="material-symbols-outlined text-[20px]">science</span>
                       Nutrient Mixes
                   </a>
       {/* Active Tab */}
-      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/alerts')}>
       <span className="material-symbols-outlined text-[20px] fill">warning</span>
                       Alerts
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/maintenance')}>
       <span className="material-symbols-outlined text-[20px]">settings_suggest</span>
                       Maintenance
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/timeline')}>
       <span className="material-symbols-outlined text-[20px]">history</span>
                       Timeline
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/settings')}>
       <span className="material-symbols-outlined text-[20px]">settings</span>
                       Settings
                   </a>
       </div>
       {/* Footer Tabs */}
       <div className="mt-auto border-t border-slate-700 font-inter text-xs font-medium uppercase tracking-wider text-slate-400 pb-4 pt-2">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/settings')}>
       <span className="material-symbols-outlined text-[20px]">help_outline</span>
                       Support
                   </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/maintenance')}>
       <span className="material-symbols-outlined text-[20px]">terminal</span>
                       Logs
                   </a>
@@ -86,23 +86,23 @@ export function SystemError({ state, dispatch, navigate }: SystemErrorProps) {
                       </div>
       <div className="relative w-64">
       <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px]">search</span>
-      <input className="w-full bg-background border border-outline-variant text-on-surface text-xs h-8 pl-9 pr-3 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-outline" placeholder="SEARCH SYSTEM..." type="text" />
+      <input className="w-full bg-background border border-outline-variant text-on-surface text-xs h-8 pl-9 pr-3 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-outline" placeholder="SEARCH SYSTEM..." type="text"  onChange={(e) => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: e.target.value } })} />
       </div>
       </div>
       {/* Actions */}
       <div className="flex items-center gap-4">
-      <button className="px-4 h-8 border border-outline-variant rounded flex items-center justify-center text-xs hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80">
+      <button className="px-4 h-8 border border-outline-variant rounded flex items-center justify-center text-xs hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80" onClick={() => navigate('/settings')}>
                           System Status
                       </button>
-      <button className="px-4 h-8 bg-primary-container text-on-primary-container rounded flex items-center justify-center text-xs hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80">
+      <button className="px-4 h-8 bg-primary-container text-on-primary-container rounded flex items-center justify-center text-xs hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80" onClick={() => dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() })}>
                           Sync Data
                       </button>
       <div className="h-6 w-px bg-slate-700 mx-2"></div>
       <div className="flex items-center gap-2">
-      <button className="w-8 h-8 flex items-center justify-center hover:bg-slate-800 transition-colors duration-150 rounded cursor-pointer active:opacity-80 text-blue-500 border-b-2 border-blue-600">
+      <button className="w-8 h-8 flex items-center justify-center hover:bg-slate-800 transition-colors duration-150 rounded cursor-pointer active:opacity-80 text-blue-500 border-b-2 border-blue-600" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined text-[20px]">notifications</span>
       </button>
-      <button className="w-8 h-8 flex items-center justify-center hover:bg-slate-800 transition-colors duration-150 rounded cursor-pointer active:opacity-80">
+      <button className="w-8 h-8 flex items-center justify-center hover:bg-slate-800 transition-colors duration-150 rounded cursor-pointer active:opacity-80" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined text-[20px]">emergency_home</span>
       </button>
       </div>
@@ -123,10 +123,10 @@ export function SystemError({ state, dispatch, navigate }: SystemErrorProps) {
                       </p>
       {/* Actions */}
       <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-      <button className="h-touch_target px-8 bg-primary-container text-on-primary-container font-label-caps text-label-caps rounded flex items-center justify-center hover:bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background">
+      <button className="h-touch_target px-8 bg-primary-container text-on-primary-container font-label-caps text-label-caps rounded flex items-center justify-center hover:bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background" onClick={() => dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() })}>
                               Retry Sync
                           </button>
-      <button className="h-touch_target px-8 bg-transparent border border-outline-variant text-on-surface font-label-caps text-label-caps rounded flex items-center justify-center hover:bg-surface-bright transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background">
+      <button className="h-touch_target px-8 bg-transparent border border-outline-variant text-on-surface font-label-caps text-label-caps rounded flex items-center justify-center hover:bg-surface-bright transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background" onClick={() => dispatch({ type: 'HYDRATE', payload: { currentRoute: state.currentRoute, cropBays: [], alerts: [], settings: { temperatureUnit: 'C', humidityUnit: '%', notificationsEnabled: true, autoSync: false, darkMode: true }, profile: state.profile, notifications: [], lastSync: null, systemStatus: 'online' } })}>
                               Clear Local Cache &amp; Reset
                           </button>
       </div>

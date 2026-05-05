@@ -35,43 +35,43 @@ export function SystemSettings({ state, dispatch, navigate }: SystemSettingsProp
       <div className="flex-1 overflow-y-auto py-4">
       <ul className="flex flex-col gap-1">
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/')}>
       <span className="material-symbols-outlined">dashboard</span>
                               Dashboard
                           </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/crop-bays')}>
       <span className="material-symbols-outlined">potted_plant</span>
                               Crop Bays
                           </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/nutrient-mixes')}>
       <span className="material-symbols-outlined">science</span>
                               Nutrient Mixes
                           </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/alerts')}>
       <span className="material-symbols-outlined">warning</span>
                               Alerts
                           </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/maintenance')}>
       <span className="material-symbols-outlined">settings_suggest</span>
                               Maintenance
                           </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/timeline')}>
       <span className="material-symbols-outlined">history</span>
                               Timeline
                           </a>
       </li>
       <li>
-      <a aria-current="page" className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a aria-current="page" className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/settings')}>
       <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 1"}}>settings</span>
                               Settings
                           </a>
@@ -81,13 +81,13 @@ export function SystemSettings({ state, dispatch, navigate }: SystemSettingsProp
       <div className="border-t border-slate-700 p-4">
       <ul className="flex flex-col gap-1">
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/settings')}>
       <span className="material-symbols-outlined">help_outline</span>
                               Support
                           </a>
       </li>
       <li>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600" href="#" onClick={() => navigate('/maintenance')}>
       <span className="material-symbols-outlined">terminal</span>
                               Logs
                           </a>
@@ -104,22 +104,22 @@ export function SystemSettings({ state, dispatch, navigate }: SystemSettingsProp
       {/* Search Bar Placeholder based on search_bar: "on_left" */}
       <div className="hidden md:flex items-center bg-slate-900 border border-slate-700 rounded-DEFAULT px-3 h-10 w-64 focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600 transition-colors">
       <span className="material-symbols-outlined text-slate-400 mr-2 text-sm">search</span>
-      <input className="bg-transparent border-none focus:ring-0 text-slate-200 font-mono-data text-mono-data w-full placeholder-slate-500" placeholder="QUERY SYSTEMS..." type="text" />
+      <input className="bg-transparent border-none focus:ring-0 text-slate-200 font-mono-data text-mono-data w-full placeholder-slate-500" placeholder="QUERY SYSTEMS..." type="text"  onChange={(e) => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: e.target.value } })} />
       </div>
       </div>
       <div className="flex items-center gap-4">
-      <button className="hidden md:flex items-center justify-center h-touch_target px-4 border border-slate-700 text-slate-300 font-label-caps text-label-caps rounded-DEFAULT hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80">
+      <button className="hidden md:flex items-center justify-center h-touch_target px-4 border border-slate-700 text-slate-300 font-label-caps text-label-caps rounded-DEFAULT hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80" onClick={() => navigate('/settings')}>
                           System Status
                       </button>
-      <button className="hidden md:flex items-center justify-center h-touch_target px-4 bg-primary-container text-on-primary-container font-label-caps text-label-caps rounded-DEFAULT hover:bg-blue-700 transition-colors duration-150 cursor-pointer active:opacity-80">
+      <button className="hidden md:flex items-center justify-center h-touch_target px-4 bg-primary-container text-on-primary-container font-label-caps text-label-caps rounded-DEFAULT hover:bg-blue-700 transition-colors duration-150 cursor-pointer active:opacity-80" onClick={() => dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() })}>
                           Sync Data
                       </button>
       <div className="flex items-center gap-2 border-l border-slate-700 pl-4 ml-2">
-      <button className="w-10 h-10 flex items-center justify-center text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 rounded-DEFAULT relative">
+      <button className="w-10 h-10 flex items-center justify-center text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 rounded-DEFAULT relative" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined">notifications</span>
       <span className="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
       </button>
-      <button className="w-10 h-10 flex items-center justify-center text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 rounded-DEFAULT">
+      <button className="w-10 h-10 flex items-center justify-center text-slate-400 hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80 rounded-DEFAULT" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined">emergency_home</span>
       </button>
       <div className="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 ml-2 overflow-hidden cursor-pointer">
@@ -137,11 +137,11 @@ export function SystemSettings({ state, dispatch, navigate }: SystemSettingsProp
       <p className="font-body-md text-body-md text-on-surface-variant">Configure primary orbital operating parameters.</p>
       </div>
       <div className="flex gap-3">
-      <button className="h-touch_target px-md flex items-center justify-center gap-2 border border-outline-variant text-on-surface rounded-DEFAULT hover:bg-surface-variant transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background outline-none">
+      <button className="h-touch_target px-md flex items-center justify-center gap-2 border border-outline-variant text-on-surface rounded-DEFAULT hover:bg-surface-variant transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background outline-none" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined text-[18px]">restart_alt</span>
       <span className="font-label-caps text-label-caps">Reset Defaults</span>
       </button>
-      <button className="h-touch_target px-md flex items-center justify-center gap-2 bg-primary-container text-on-primary-container rounded-DEFAULT hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background outline-none">
+      <button className="h-touch_target px-md flex items-center justify-center gap-2 bg-primary-container text-on-primary-container rounded-DEFAULT hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background outline-none" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined text-[18px]">save</span>
       <span className="font-label-caps text-label-caps">Apply Changes</span>
       </button>
@@ -164,14 +164,14 @@ export function SystemSettings({ state, dispatch, navigate }: SystemSettingsProp
       </div>
       <div className="flex bg-surface-container-highest rounded-lg p-1 border border-surface-variant">
       <label className="cursor-pointer">
-      <input checked={true} className="sr-only peer" name="theme" type="radio" />
+      <input checked={true} className="sr-only peer" name="theme" type="radio"  onChange={(e) => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: e.target.value } })} />
       <div className="px-4 py-2 rounded-DEFAULT font-label-caps text-label-caps text-on-surface-variant peer-checked:bg-[#334155] peer-checked:text-on-background transition-all flex items-center gap-2">
       <span className="material-symbols-outlined text-[16px]">dark_mode</span>
                                               Dark (Active)
                                           </div>
       </label>
       <label className="cursor-pointer opacity-50 cursor-not-allowed" title="Light mode restricted in current sector">
-      <input className="sr-only peer" disabled={true} name="theme" type="radio" />
+      <input className="sr-only peer" disabled={true} name="theme" type="radio"  onChange={(e) => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: e.target.value } })} />
       <div className="px-4 py-2 rounded-DEFAULT font-label-caps text-label-caps text-on-surface-variant transition-all flex items-center gap-2">
       <span className="material-symbols-outlined text-[16px]">light_mode</span>
                                               Light
@@ -186,7 +186,7 @@ export function SystemSettings({ state, dispatch, navigate }: SystemSettingsProp
       <p className="font-body-md text-body-md text-on-surface-variant">Primary operational dialect.</p>
       </div>
       <div className="relative w-full sm:w-64">
-      <select className="w-full h-touch_target bg-[#0F172A] border border-[#334155] text-on-background font-body-md text-body-md rounded-DEFAULT px-md appearance-none focus:border-primary focus:ring-1 focus:ring-primary outline-none">
+      <select className="w-full h-touch_target bg-[#0F172A] border border-[#334155] text-on-background font-body-md text-body-md rounded-DEFAULT px-md appearance-none focus:border-primary focus:ring-1 focus:ring-primary outline-none" onChange={(e) => dispatch({ type: 'UPDATE_SETTINGS', payload: { [e.target.name || e.target.id]: e.target.value } })}>
       <option value="en">English (US) - Standard</option>
       <option value="en-gb">English (UK) - Orbital</option>
       <option value="es">Spanish - Station 4</option>
@@ -221,11 +221,11 @@ export function SystemSettings({ state, dispatch, navigate }: SystemSettingsProp
       </div>
       {/* Actions */}
       <div className="flex flex-col gap-3 mt-auto pt-4">
-      <button className="h-touch_target w-full flex items-center justify-center gap-2 border border-[#334155] text-on-surface rounded-DEFAULT hover:bg-surface-variant transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background outline-none">
+      <button className="h-touch_target w-full flex items-center justify-center gap-2 border border-[#334155] text-on-surface rounded-DEFAULT hover:bg-surface-variant transition-colors focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background outline-none" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined text-[18px]">download</span>
       <span className="font-label-caps text-label-caps">Export CSV Log</span>
       </button>
-      <button className="h-touch_target w-full flex items-center justify-center gap-2 border border-error/50 text-error rounded-DEFAULT hover:bg-error/10 transition-colors focus:ring-2 focus:ring-error focus:ring-offset-2 focus:ring-offset-background outline-none">
+      <button className="h-touch_target w-full flex items-center justify-center gap-2 border border-error/50 text-error rounded-DEFAULT hover:bg-error/10 transition-colors focus:ring-2 focus:ring-error focus:ring-offset-2 focus:ring-offset-background outline-none" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined text-[18px]">delete_forever</span>
       <span className="font-label-caps text-label-caps">Clear Local Storage</span>
       </button>
@@ -246,7 +246,7 @@ export function SystemSettings({ state, dispatch, navigate }: SystemSettingsProp
       <p className="font-body-md text-body-md text-on-surface-variant text-sm">Bypass silent mode for hardware failures.</p>
       </div>
       <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
-      <input checked={true} className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-[#334155] appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0" id="toggle1" name="toggle" style={{margin: "0", outline: "none"}} type="checkbox" />
+      <input checked={true} className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-[#334155] appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0" id="toggle1" name="toggle" style={{margin: "0", outline: "none"}} type="checkbox"  onChange={(e) => dispatch({ type: 'UPDATE_SETTINGS', payload: { [e.target.name || e.target.id]: e.target.checked } })} />
       <label className="toggle-label block overflow-hidden h-6 rounded-full bg-[#0F172A] border border-[#334155] cursor-pointer transition-all duration-300" htmlFor="toggle1"></label>
       </div>
       </div>
@@ -257,7 +257,7 @@ export function SystemSettings({ state, dispatch, navigate }: SystemSettingsProp
       <p className="font-body-md text-body-md text-on-surface-variant text-sm">Daily digest of crop cycle estimations.</p>
       </div>
       <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
-      <input className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-[#334155] appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0" id="toggle2" name="toggle" style={{margin: "0", outline: "none"}} type="checkbox" />
+      <input className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-[#334155] appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0" id="toggle2" name="toggle" style={{margin: "0", outline: "none"}} type="checkbox"  onChange={(e) => dispatch({ type: 'UPDATE_SETTINGS', payload: { [e.target.name || e.target.id]: e.target.checked } })} />
       <label className="toggle-label block overflow-hidden h-6 rounded-full bg-[#0F172A] border border-[#334155] cursor-pointer transition-all duration-300" htmlFor="toggle2"></label>
       </div>
       </div>
@@ -268,7 +268,7 @@ export function SystemSettings({ state, dispatch, navigate }: SystemSettingsProp
       <p className="font-body-md text-body-md text-on-surface-variant text-sm">Notify on minor O2/CO2 fluctuations.</p>
       </div>
       <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
-      <input checked={true} className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-[#334155] appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0" id="toggle3" name="toggle" style={{margin: "0", outline: "none"}} type="checkbox" />
+      <input checked={true} className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-[#334155] appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0" id="toggle3" name="toggle" style={{margin: "0", outline: "none"}} type="checkbox"  onChange={(e) => dispatch({ type: 'UPDATE_SETTINGS', payload: { [e.target.name || e.target.id]: e.target.checked } })} />
       <label className="toggle-label block overflow-hidden h-6 rounded-full bg-[#0F172A] border border-[#334155] cursor-pointer transition-all duration-300" htmlFor="toggle3"></label>
       </div>
       </div>

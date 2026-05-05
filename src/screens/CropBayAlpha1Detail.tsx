@@ -28,47 +28,47 @@ export function CropBayAlpha1Detail({ state, dispatch, navigate }: CropBayAlpha1
       </div>
       <div className="flex-1 overflow-y-auto py-2">
       {/* Dashboard */}
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#" onClick={() => navigate('/')}>
       <span className="material-symbols-outlined" data-icon="dashboard">dashboard</span>
       <span>Dashboard</span>
       </a>
       {/* Crop Bays (ACTIVE) */}
-      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#" onClick={() => navigate('/crop-bays')}>
       <span className="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
       <span>Crop Bays</span>
       </a>
       {/* Nutrient Mixes */}
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#" onClick={() => navigate('/nutrient-mixes')}>
       <span className="material-symbols-outlined" data-icon="science">science</span>
       <span>Nutrient Mixes</span>
       </a>
       {/* Alerts */}
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#" onClick={() => navigate('/alerts')}>
       <span className="material-symbols-outlined" data-icon="warning">warning</span>
       <span>Alerts</span>
       </a>
       {/* Maintenance */}
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#" onClick={() => navigate('/maintenance')}>
       <span className="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
       <span>Maintenance</span>
       </a>
       {/* Timeline */}
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#" onClick={() => navigate('/timeline')}>
       <span className="material-symbols-outlined" data-icon="history">history</span>
       <span>Timeline</span>
       </a>
       {/* Settings */}
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#" onClick={() => navigate('/settings')}>
       <span className="material-symbols-outlined" data-icon="settings">settings</span>
       <span>Settings</span>
       </a>
       </div>
       <div className="mt-auto py-4 data-divider border-t">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#" onClick={() => navigate('/settings')}>
       <span className="material-symbols-outlined" data-icon="help_outline">help_outline</span>
       <span>Support</span>
       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#" onClick={() => navigate('/maintenance')}>
       <span className="material-symbols-outlined" data-icon="terminal">terminal</span>
       <span>Logs</span>
       </a>
@@ -81,7 +81,7 @@ export function CropBayAlpha1Detail({ state, dispatch, navigate }: CropBayAlpha1
       {/* Brand/Search Area */}
       <div className="flex items-center gap-6">
       {/* Mobile Menu Toggle (Visible only on small screens) */}
-      <button className="md:hidden text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-2 rounded cursor-pointer active:opacity-80">
+      <button className="md:hidden text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-2 rounded cursor-pointer active:opacity-80" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined" data-icon="menu">menu</span>
       </button>
       <div className="text-lg font-black tracking-widest text-blue-600 font-inter tracking-tight text-sm font-semibold uppercase">
@@ -90,15 +90,15 @@ export function CropBayAlpha1Detail({ state, dispatch, navigate }: CropBayAlpha1
       </div>
       {/* Actions */}
       <div className="flex items-center gap-4">
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-2 rounded-full cursor-pointer active:opacity-80">
+      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-2 rounded-full cursor-pointer active:opacity-80" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined" data-icon="notifications">notifications</span>
       </button>
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-2 rounded-full cursor-pointer active:opacity-80">
+      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-2 rounded-full cursor-pointer active:opacity-80" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined" data-icon="emergency_home">emergency_home</span>
       </button>
       <div className="hidden sm:flex items-center gap-2 border-l border-slate-700 pl-4 ml-2">
-      <button className="btn-secondary text-sm h-10 min-h-0">System Status</button>
-      <button className="btn-primary text-sm h-10 min-h-0">Sync Data</button>
+      <button className="btn-secondary text-sm h-10 min-h-0" onClick={() => navigate('/settings')}>System Status</button>
+      <button className="btn-primary text-sm h-10 min-h-0" onClick={() => dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() })}>Sync Data</button>
       </div>
       </div>
       </header>
@@ -111,15 +111,15 @@ export function CropBayAlpha1Detail({ state, dispatch, navigate }: CropBayAlpha1
       <p className="font-body-md text-body-md text-on-surface-variant mt-1">Strain: Lollo Bionda (Hydroponic) • Cycle Day: 24/45</p>
       </div>
       <div className="flex flex-wrap gap-2">
-      <button className="btn-secondary gap-2">
+      <button className="btn-secondary gap-2" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined text-sm">water_drop</span>
                               Flush System
                           </button>
-      <button className="btn-secondary gap-2">
+      <button className="btn-secondary gap-2" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined text-sm">edit</span>
                               Edit Configuration
                           </button>
-      <button className="btn-primary gap-2">
+      <button className="btn-primary gap-2" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Button pressed' } })}>
       <span className="material-symbols-outlined text-sm">agriculture</span>
                               Trigger Manual Harvest
                           </button>
@@ -244,7 +244,7 @@ export function CropBayAlpha1Detail({ state, dispatch, navigate }: CropBayAlpha1
       </div>
       <h3 className="font-h3 text-h3 text-on-surface">Visual Inspection Feed</h3>
       </div>
-      <button className="btn-secondary bg-slate-900/80 backdrop-blur">Expand View</button>
+      <button className="btn-secondary bg-slate-900/80 backdrop-blur" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'expand view' } })}>Expand View</button>
       </div>
       </div>
       </div>
@@ -295,7 +295,7 @@ export function CropBayAlpha1Detail({ state, dispatch, navigate }: CropBayAlpha1
       </div>
       </div>
       <div className="p-md data-divider border-t border-b-0 text-center">
-      <button className="text-primary font-label-caps text-label-caps uppercase hover:underline">View Full Log</button>
+      <button className="text-primary font-label-caps text-label-caps uppercase hover:underline" onClick={() => dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Action: view full log' } })}>View Full Log</button>
       </div>
       </div>
       </div>
