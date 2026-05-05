@@ -24,6 +24,11 @@ function navLinkClasses(isActive: boolean) {
 export function SystemSettings(props: SystemSettingsProps) {
   const { state, dispatch, navigate } = props;
   const route = state.currentRoute;
+  const [query, setQuery] = useState('');
+  const [language, setLanguage] = useState('en');
+  const [criticalFaults, setCriticalFaults] = useState(true);
+  const [yieldProjections, setYieldProjections] = useState(false);
+  const [atmosphericShifts, setAtmosphericShifts] = useState(true);
 
   return (
     <>
@@ -112,7 +117,7 @@ export function SystemSettings(props: SystemSettingsProps) {
       {/* Search Bar Placeholder based on search_bar: "on_left" */}
       <div className="hidden md:flex items-center bg-slate-900 border border-slate-700 rounded-DEFAULT px-3 h-10 w-64 focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600 transition-colors">
       <span className="material-symbols-outlined text-slate-400 mr-2 text-sm">search</span>
-      <input className="bg-transparent border-none focus:ring-0 text-slate-200 font-mono-data text-mono-data w-full placeholder-slate-500" placeholder="QUERY SYSTEMS..." type="text" />
+      <input className="bg-transparent border-none focus:ring-0 text-slate-200 font-mono-data text-mono-data w-full placeholder-slate-500" placeholder="QUERY SYSTEMS..." type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
       </div>
       </div>
       <div className="flex items-center gap-4">
@@ -172,7 +177,7 @@ export function SystemSettings(props: SystemSettingsProps) {
       </div>
       <div className="flex bg-surface-container-highest rounded-lg p-1 border border-surface-variant">
       <label className="cursor-pointer">
-      <input checked={true} className="sr-only peer" name="theme" type="radio" />
+      <input checked={true} onChange={() => {}} className="sr-only peer" name="theme" type="radio" />
       <div className="px-4 py-2 rounded-DEFAULT font-label-caps text-label-caps text-on-surface-variant peer-checked:bg-[#334155] peer-checked:text-on-background transition-all flex items-center gap-2">
       <span className="material-symbols-outlined text-[16px]">dark_mode</span>
                                               Dark (Active)
@@ -194,7 +199,7 @@ export function SystemSettings(props: SystemSettingsProps) {
       <p className="font-body-md text-body-md text-on-surface-variant">Primary operational dialect.</p>
       </div>
       <div className="relative w-full sm:w-64">
-      <select className="w-full h-touch_target bg-[#0F172A] border border-[#334155] text-on-background font-body-md text-body-md rounded-DEFAULT px-md appearance-none focus:border-primary focus:ring-1 focus:ring-primary outline-none">
+      <select className="w-full h-touch_target bg-[#0F172A] border border-[#334155] text-on-background font-body-md text-body-md rounded-DEFAULT px-md appearance-none focus:border-primary focus:ring-1 focus:ring-primary outline-none" value={language} onChange={(e) => setLanguage(e.target.value)}>
       <option value="en">English (US) - Standard</option>
       <option value="en-gb">English (UK) - Orbital</option>
       <option value="es">Spanish - Station 4</option>
@@ -254,7 +259,7 @@ export function SystemSettings(props: SystemSettingsProps) {
       <p className="font-body-md text-body-md text-on-surface-variant text-sm">Bypass silent mode for hardware failures.</p>
       </div>
       <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
-      <input checked={true} className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-[#334155] appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0" id="toggle1" name="toggle" style={{margin: "0", outline: "none"}} type="checkbox" />
+      <input checked={criticalFaults} onChange={(e) => setCriticalFaults(e.target.checked)} className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-[#334155] appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0" id="toggle1" name="toggle" style={{margin: "0", outline: "none"}} type="checkbox" />
       <label className="toggle-label block overflow-hidden h-6 rounded-full bg-[#0F172A] border border-[#334155] cursor-pointer transition-all duration-300" htmlFor="toggle1"></label>
       </div>
       </div>
@@ -265,7 +270,7 @@ export function SystemSettings(props: SystemSettingsProps) {
       <p className="font-body-md text-body-md text-on-surface-variant text-sm">Daily digest of crop cycle estimations.</p>
       </div>
       <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
-      <input className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-[#334155] appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0" id="toggle2" name="toggle" style={{margin: "0", outline: "none"}} type="checkbox" />
+      <input checked={yieldProjections} onChange={(e) => setYieldProjections(e.target.checked)} className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-[#334155] appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0" id="toggle2" name="toggle" style={{margin: "0", outline: "none"}} type="checkbox" />
       <label className="toggle-label block overflow-hidden h-6 rounded-full bg-[#0F172A] border border-[#334155] cursor-pointer transition-all duration-300" htmlFor="toggle2"></label>
       </div>
       </div>
@@ -276,7 +281,7 @@ export function SystemSettings(props: SystemSettingsProps) {
       <p className="font-body-md text-body-md text-on-surface-variant text-sm">Notify on minor O2/CO2 fluctuations.</p>
       </div>
       <div className="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
-      <input checked={true} className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-[#334155] appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0" id="toggle3" name="toggle" style={{margin: "0", outline: "none"}} type="checkbox" />
+      <input checked={atmosphericShifts} onChange={(e) => setAtmosphericShifts(e.target.checked)} className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-[#334155] appearance-none cursor-pointer transition-all duration-300 z-10 top-0 left-0" id="toggle3" name="toggle" style={{margin: "0", outline: "none"}} type="checkbox" />
       <label className="toggle-label block overflow-hidden h-6 rounded-full bg-[#0F172A] border border-[#334155] cursor-pointer transition-all duration-300" htmlFor="toggle3"></label>
       </div>
       </div>

@@ -195,7 +195,7 @@ export function SystemInsights(props: SystemInsightsProps) {
       <div className="col-span-1 md:col-span-12 bg-surface-container rounded-xl border border-outline-variant overflow-hidden">
       <div className="p-4 border-b border-surface-variant bg-surface-container-high flex justify-between items-center">
       <h3 className="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Sector Performance</h3>
-      <button className="text-primary hover:text-primary-fixed transition-colors">
+      <button onClick={() => { dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Sector performance options opened' } }); }} className="text-primary hover:text-primary-fixed transition-colors">
       <span className="material-symbols-outlined text-[20px]">more_horiz</span>
       </button>
       </div>

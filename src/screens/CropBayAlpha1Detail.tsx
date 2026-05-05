@@ -89,7 +89,7 @@ export function CropBayAlpha1Detail(props: CropBayAlpha1DetailProps) {
       {/* Brand/Search Area */}
       <div className="flex items-center gap-6">
       {/* Mobile Menu Toggle (Visible only on small screens) */}
-      <button className="md:hidden text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-2 rounded cursor-pointer active:opacity-80">
+      <button onClick={() => navigate('/')} className="md:hidden text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-2 rounded cursor-pointer active:opacity-80">
       <span className="material-symbols-outlined" data-icon="menu">menu</span>
       </button>
       <div className="text-lg font-black tracking-widest text-blue-600 font-inter tracking-tight text-sm font-semibold uppercase">
@@ -98,10 +98,10 @@ export function CropBayAlpha1Detail(props: CropBayAlpha1DetailProps) {
       </div>
       {/* Actions */}
       <div className="flex items-center gap-4">
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-2 rounded-full cursor-pointer active:opacity-80">
+      <button onClick={() => navigate('/alerts')} className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-2 rounded-full cursor-pointer active:opacity-80">
       <span className="material-symbols-outlined" data-icon="notifications">notifications</span>
       </button>
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-2 rounded-full cursor-pointer active:opacity-80">
+      <button onClick={() => navigate('/maintenance')} className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-2 rounded-full cursor-pointer active:opacity-80">
       <span className="material-symbols-outlined" data-icon="emergency_home">emergency_home</span>
       </button>
       <div className="hidden sm:flex items-center gap-2 border-l border-slate-700 pl-4 ml-2">
@@ -303,7 +303,7 @@ export function CropBayAlpha1Detail(props: CropBayAlpha1DetailProps) {
       </div>
       </div>
       <div className="p-md data-divider border-t border-b-0 text-center">
-      <button className="text-primary font-label-caps text-label-caps uppercase hover:underline">View Full Log</button>
+      <button onClick={() => navigate('/crop-bays')} className="text-primary font-label-caps text-label-caps uppercase hover:underline">View Full Log</button>
       </div>
       </div>
       </div>

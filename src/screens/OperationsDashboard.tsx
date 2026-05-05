@@ -25,6 +25,7 @@ function navLinkClasses(isActive: boolean) {
 export function OperationsDashboard(props: OperationsDashboardProps) {
   const { state, dispatch, navigate } = props;
   const route = state.currentRoute;
+  const [searchQuery, setSearchQuery] = useState('');
   return (
     <>
       {/* TopAppBar */}
@@ -107,7 +108,7 @@ export function OperationsDashboard(props: OperationsDashboardProps) {
       <div className="flex items-center gap-md">
       <div className="relative flex items-center">
       <span className="material-symbols-outlined absolute left-sm text-on-surface-variant text-[18px]">search</span>
-      <input className="bg-surface-container-lowest border border-outline-variant text-on-surface rounded font-body-md text-body-md pl-xl pr-sm py-sm focus:border-primary-container focus:ring-1 focus:ring-primary-container focus:outline-none transition-all w-64 h-touch_target" placeholder="Search bays, crops..." type="text" />
+      <input className="bg-surface-container-lowest border border-outline-variant text-on-surface rounded font-body-md text-body-md pl-xl pr-sm py-sm focus:border-primary-container focus:ring-1 focus:ring-primary-container focus:outline-none transition-all w-64 h-touch_target" placeholder="Search bays, crops..." type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
       </div>
       <div className="flex gap-sm">
       <button onClick={() => navigate('/configure-crop-bay')} className="bg-surface-container border border-outline-variant text-on-surface rounded px-md h-touch_target flex items-center justify-center font-label-caps text-label-caps hover:bg-surface-container-highest transition-colors">

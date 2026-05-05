@@ -24,6 +24,7 @@ function navLinkClasses(isActive: boolean) {
 export function SystemError(props: SystemErrorProps) {
   const { state, dispatch, navigate } = props;
   const route = state.currentRoute;
+  const [searchQuery, setSearchQuery] = useState('');
 
   return (
     <>
@@ -94,23 +95,23 @@ export function SystemError(props: SystemErrorProps) {
                       </div>
       <div className="relative w-64">
       <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px]">search</span>
-      <input className="w-full bg-background border border-outline-variant text-on-surface text-xs h-8 pl-9 pr-3 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-outline" placeholder="SEARCH SYSTEM..." type="text" />
+      <input className="w-full bg-background border border-outline-variant text-on-surface text-xs h-8 pl-9 pr-3 rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-outline" placeholder="SEARCH SYSTEM..." type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
       </div>
       </div>
       {/* Actions */}
       <div className="flex items-center gap-4">
-      <button className="px-4 h-8 border border-outline-variant rounded flex items-center justify-center text-xs hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80">
+      <button onClick={() => navigate('/settings')} className="px-4 h-8 border border-outline-variant rounded flex items-center justify-center text-xs hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80">
                           System Status
                       </button>
-      <button className="px-4 h-8 bg-primary-container text-on-primary-container rounded flex items-center justify-center text-xs hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80">
+      <button onClick={() => { dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() }); }} className="px-4 h-8 bg-primary-container text-on-primary-container rounded flex items-center justify-center text-xs hover:bg-slate-800 transition-colors duration-150 cursor-pointer active:opacity-80">
                           Sync Data
                       </button>
       <div className="h-6 w-px bg-slate-700 mx-2"></div>
       <div className="flex items-center gap-2">
-      <button className="w-8 h-8 flex items-center justify-center hover:bg-slate-800 transition-colors duration-150 rounded cursor-pointer active:opacity-80 text-blue-500 border-b-2 border-blue-600">
+      <button onClick={() => navigate('/alerts')} className="w-8 h-8 flex items-center justify-center hover:bg-slate-800 transition-colors duration-150 rounded cursor-pointer active:opacity-80 text-blue-500 border-b-2 border-blue-600">
       <span className="material-symbols-outlined text-[20px]">notifications</span>
       </button>
-      <button className="w-8 h-8 flex items-center justify-center hover:bg-slate-800 transition-colors duration-150 rounded cursor-pointer active:opacity-80">
+      <button onClick={() => navigate('/maintenance')} className="w-8 h-8 flex items-center justify-center hover:bg-slate-800 transition-colors duration-150 rounded cursor-pointer active:opacity-80">
       <span className="material-symbols-outlined text-[20px]">emergency_home</span>
       </button>
       </div>

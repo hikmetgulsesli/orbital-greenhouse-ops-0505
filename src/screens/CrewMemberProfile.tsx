@@ -34,16 +34,16 @@ export function CrewMemberProfile(props: CrewMemberProfileProps) {
       </div>
       <div className="flex items-center gap-lg">
       <span className="font-inter tracking-tight text-sm font-semibold uppercase text-slate-400">System Status</span>
-      <button className="font-inter tracking-tight text-sm font-semibold uppercase text-blue-600 cursor-pointer active:opacity-80 hover:bg-slate-800 transition-colors duration-150 px-md py-sm rounded-DEFAULT border border-transparent">Sync Data</button>
+      <button onClick={() => { dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() }); }} className="font-inter tracking-tight text-sm font-semibold uppercase text-blue-600 cursor-pointer active:opacity-80 hover:bg-slate-800 transition-colors duration-150 px-md py-sm rounded-DEFAULT border border-transparent">Sync Data</button>
       <div className="flex items-center gap-xs">
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-sm rounded-full cursor-pointer active:opacity-80 flex items-center justify-center h-touch_target w-touch_target">
+      <button onClick={() => navigate('/alerts')} className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-sm rounded-full cursor-pointer active:opacity-80 flex items-center justify-center h-touch_target w-touch_target">
       <span className="material-symbols-outlined">notifications</span>
       </button>
-      <button className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-sm rounded-full cursor-pointer active:opacity-80 flex items-center justify-center h-touch_target w-touch_target">
+      <button onClick={() => navigate('/maintenance')} className="text-slate-400 hover:bg-slate-800 transition-colors duration-150 p-sm rounded-full cursor-pointer active:opacity-80 flex items-center justify-center h-touch_target w-touch_target">
       <span className="material-symbols-outlined">emergency_home</span>
       </button>
       </div>
-      <button className="h-10 w-10 rounded-full overflow-hidden border-2 border-blue-600 ml-sm cursor-pointer hover:opacity-80 transition-opacity">
+      <button onClick={() => navigate('/profile')} className="h-10 w-10 rounded-full overflow-hidden border-2 border-blue-600 ml-sm cursor-pointer hover:opacity-80 transition-opacity">
       <img alt="Crew Member Profile" className="w-full h-full object-cover" data-alt="A striking portrait of a male astronaut or control room operator in a sleek, dark high-tech environment. The lighting is moody, with cool blue and stark white highlights reflecting off subtle metallic elements of his utilitarian dark uniform. His expression is serious, focused, and professional, embodying a calm, reliable interface aesthetic. The background is a blurred, deep slate-grey command center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcZnr33XdupB9c8b2gnggDA5EDCaFtbjsDVciBVSGN8RFXHPUa2CpHlkkO6osq7W7Z4clg0w9T0NS0S0_1SMqCrQmS0YbrIAE31w1qq7MCX7TrdOZ1n3ZMRQ7N0p4PdUgXSErH6JB0T3awlMv0YJmbNOGrQqfDGhD6e7CYBrcfnytFHg_mXO0QIC6qbT24iIwWcvVYofGRCBFWvdhjOnAcD-YWoU0NMs1VP0dfvD2c3ag_4gGsiPGLHmVtwuKE1yfGKWnwRmYZ8zA" />
       </button>
       </div>
