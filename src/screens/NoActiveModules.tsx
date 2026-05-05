@@ -8,10 +8,15 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface NoActiveModulesProps {}
+interface NoActiveModulesProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
 
-export function NoActiveModules(props: NoActiveModulesProps) {
+export function NoActiveModules({ state, dispatch, navigate }: NoActiveModulesProps) {
   return (
     <>
       {/* SideNavBar */}

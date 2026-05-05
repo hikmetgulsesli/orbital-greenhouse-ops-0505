@@ -23,7 +23,6 @@ function getInitialState(): AppState {
   const saved = loadState();
   const route = typeof window !== 'undefined' ? window.location.hash.replace('#', '') || '/' : '/';
   return {
-    currentRoute: route,
     cropBays: [],
     alerts: [],
     settings: defaultSettings,

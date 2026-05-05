@@ -8,10 +8,15 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface SystemSettingsProps {}
+interface SystemSettingsProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
 
-export function SystemSettings(props: SystemSettingsProps) {
+export function SystemSettings({ state, dispatch, navigate }: SystemSettingsProps) {
   return (
     <>
       {/* SideNavBar (JSON Component) */}

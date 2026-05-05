@@ -8,10 +8,15 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface SystemInsightsProps {}
+interface SystemInsightsProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
 
-export function SystemInsights(props: SystemInsightsProps) {
+export function SystemInsights({ state, dispatch, navigate }: SystemInsightsProps) {
   return (
     <>
       {/* TopAppBar */}

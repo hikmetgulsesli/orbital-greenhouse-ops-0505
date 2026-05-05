@@ -8,10 +8,15 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface SystemErrorProps {}
+interface SystemErrorProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
 
-export function SystemError(props: SystemErrorProps) {
+export function SystemError({ state, dispatch, navigate }: SystemErrorProps) {
   return (
     <>
       {/* SideNavBar */}

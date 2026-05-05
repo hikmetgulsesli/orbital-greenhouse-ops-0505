@@ -8,10 +8,15 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface CrewMemberProfileProps {}
+interface CrewMemberProfileProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
 
-export function CrewMemberProfile(props: CrewMemberProfileProps) {
+export function CrewMemberProfile({ state, dispatch, navigate }: CrewMemberProfileProps) {
   return (
     <>
       {/* TopAppBar JSON Anchor */}

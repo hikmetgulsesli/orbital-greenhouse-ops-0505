@@ -8,10 +8,15 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface ConfigureCropBayProps {}
+interface ConfigureCropBayProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
 
-export function ConfigureCropBay(props: ConfigureCropBayProps) {
+export function ConfigureCropBay({ state, dispatch, navigate }: ConfigureCropBayProps) {
   return (
     <>
       {/* SideNavBar */}
