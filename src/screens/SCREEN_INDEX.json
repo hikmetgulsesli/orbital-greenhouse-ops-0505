@@ -1,0 +1,74 @@
+[
+  {
+    "screenId": "b73123b8034f4616a351ab5ed3dcae55",
+    "title": "No Active Modules",
+    "componentName": "NoActiveModules",
+    "file": "src/screens/NoActiveModules.tsx",
+    "buttons": 5,
+    "inputs": 0,
+    "links": 9
+  },
+  {
+    "screenId": "1115c152d622453b86b5963c5a2e169e",
+    "title": "Configure Crop Bay",
+    "componentName": "ConfigureCropBay",
+    "file": "src/screens/ConfigureCropBay.tsx",
+    "buttons": 6,
+    "inputs": 6,
+    "links": 10
+  },
+  {
+    "screenId": "4aee37e26b5e4af9bb51001763ff75d0",
+    "title": "Crew Member Profile",
+    "componentName": "CrewMemberProfile",
+    "file": "src/screens/CrewMemberProfile.tsx",
+    "buttons": 6,
+    "inputs": 0,
+    "links": 9
+  },
+  {
+    "screenId": "ebabaa42fca44ed29ef32f8dc8a4239e",
+    "title": "System Error",
+    "componentName": "SystemError",
+    "file": "src/screens/SystemError.tsx",
+    "buttons": 6,
+    "inputs": 1,
+    "links": 9
+  },
+  {
+    "screenId": "3d7bacbf38294ac0b84765ba286044b0",
+    "title": "System Settings",
+    "componentName": "SystemSettings",
+    "file": "src/screens/SystemSettings.tsx",
+    "buttons": 8,
+    "inputs": 6,
+    "links": 9
+  },
+  {
+    "screenId": "85f2bf08ae414b6084b313d242dbee51",
+    "title": "Operations Dashboard",
+    "componentName": "OperationsDashboard",
+    "file": "src/screens/OperationsDashboard.tsx",
+    "buttons": 4,
+    "inputs": 1,
+    "links": 9
+  },
+  {
+    "screenId": "eabd4de1cbd046c2b8ebbd87122dfdb8",
+    "title": "System Insights",
+    "componentName": "SystemInsights",
+    "file": "src/screens/SystemInsights.tsx",
+    "buttons": 6,
+    "inputs": 0,
+    "links": 9
+  },
+  {
+    "screenId": "8b9abc298d02489ca0a466a351531de5",
+    "title": "Crop Bay Alpha-1 Detail",
+    "componentName": "CropBayAlpha1Detail",
+    "file": "src/screens/CropBayAlpha1Detail.tsx",
+    "buttons": 10,
+    "inputs": 0,
+    "links": 9
+  }
+]
