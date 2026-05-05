@@ -8,8 +8,13 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface CropBayAlpha1DetailProps {}
+interface CropBayAlpha1DetailProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
 
 export function CropBayAlpha1Detail(props: CropBayAlpha1DetailProps) {
   return (
