@@ -8,10 +8,23 @@
 // 4. Replace placeholder data with props/state
 
 import { useState } from "react";
+import type { AppState, AppAction } from "../types/domain";
 
-interface CropBayAlpha1DetailProps {}
+interface CropBayAlpha1DetailProps {
+  state: AppState;
+  dispatch: React.Dispatch<AppAction>;
+  navigate: (path: string) => void;
+}
 
+function navLinkClasses(isActive: boolean) {
+  return isActive
+    ? "bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600"
+    : "text-slate-400 px-4 py-3 flex items-center gap-3 font-inter text-xs font-medium uppercase tracking-wider hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600";
+}
 export function CropBayAlpha1Detail(props: CropBayAlpha1DetailProps) {
+  const { state, dispatch, navigate } = props;
+  const route = state.currentRoute;
+
   return (
     <>
       {/* SideNavBar (JSON Derived) */}
@@ -23,47 +36,47 @@ export function CropBayAlpha1Detail(props: CropBayAlpha1DetailProps) {
       </div>
       <div className="flex-1 overflow-y-auto py-2">
       {/* Dashboard */}
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined" data-icon="dashboard">dashboard</span>
       <span>Dashboard</span>
       </a>
       {/* Crop Bays (ACTIVE) */}
-      <a className="bg-slate-800 text-blue-400 border-l-4 border-blue-600 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className={navLinkClasses(route === '/crop-bays')} href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
       <span>Crop Bays</span>
       </a>
       {/* Nutrient Mixes */}
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined" data-icon="science">science</span>
       <span>Nutrient Mixes</span>
       </a>
       {/* Alerts */}
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined" data-icon="warning">warning</span>
       <span>Alerts</span>
       </a>
       {/* Maintenance */}
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined" data-icon="settings_suggest">settings_suggest</span>
       <span>Maintenance</span>
       </a>
       {/* Timeline */}
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined" data-icon="history">history</span>
       <span>Timeline</span>
       </a>
       {/* Settings */}
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined" data-icon="settings">settings</span>
       <span>Settings</span>
       </a>
       </div>
       <div className="mt-auto py-4 data-divider border-t">
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined" data-icon="help_outline">help_outline</span>
       <span>Support</span>
       </a>
-      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#">
+      <a className="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800 hover:text-slate-100 transition-all duration-200 focus-within:ring-2 focus-within:ring-blue-600 font-inter text-xs font-medium uppercase tracking-wider" href="#/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>
       <span className="material-symbols-outlined" data-icon="terminal">terminal</span>
       <span>Logs</span>
       </a>
@@ -92,8 +105,8 @@ export function CropBayAlpha1Detail(props: CropBayAlpha1DetailProps) {
       <span className="material-symbols-outlined" data-icon="emergency_home">emergency_home</span>
       </button>
       <div className="hidden sm:flex items-center gap-2 border-l border-slate-700 pl-4 ml-2">
-      <button className="btn-secondary text-sm h-10 min-h-0">System Status</button>
-      <button className="btn-primary text-sm h-10 min-h-0">Sync Data</button>
+      <button onClick={() => navigate('/settings')} className="btn-secondary text-sm h-10 min-h-0">System Status</button>
+      <button onClick={() => { dispatch({ type: 'SET_LAST_SYNC', payload: new Date().toISOString() }); }} className="btn-primary text-sm h-10 min-h-0">Sync Data</button>
       </div>
       </div>
       </header>
@@ -106,15 +119,15 @@ export function CropBayAlpha1Detail(props: CropBayAlpha1DetailProps) {
       <p className="font-body-md text-body-md text-on-surface-variant mt-1">Strain: Lollo Bionda (Hydroponic) • Cycle Day: 24/45</p>
       </div>
       <div className="flex flex-wrap gap-2">
-      <button className="btn-secondary gap-2">
+      <button onClick={() => navigate('/configure-crop-bay')} className="btn-secondary gap-2">
       <span className="material-symbols-outlined text-sm">water_drop</span>
                               Flush System
                           </button>
-      <button className="btn-secondary gap-2">
+      <button onClick={() => navigate('/configure-crop-bay')} className="btn-secondary gap-2">
       <span className="material-symbols-outlined text-sm">edit</span>
                               Edit Configuration
                           </button>
-      <button className="btn-primary gap-2">
+      <button onClick={() => { dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Manual harvest triggered for Bay Alpha-7' } }); }} className="btn-primary gap-2">
       <span className="material-symbols-outlined text-sm">agriculture</span>
                               Trigger Manual Harvest
                           </button>
@@ -239,7 +252,7 @@ export function CropBayAlpha1Detail(props: CropBayAlpha1DetailProps) {
       </div>
       <h3 className="font-h3 text-h3 text-on-surface">Visual Inspection Feed</h3>
       </div>
-      <button className="btn-secondary bg-slate-900/80 backdrop-blur">Expand View</button>
+      <button onClick={() => { dispatch({ type: 'ADD_NOTIFICATION', payload: { id: Date.now().toString(), message: 'Expanded view opened for CAM_04' } }); }} className="btn-secondary bg-slate-900/80 backdrop-blur">Expand View</button>
       </div>
       </div>
       </div>
